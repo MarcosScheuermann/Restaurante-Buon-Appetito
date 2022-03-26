@@ -1,12 +1,10 @@
-import React from "react";
+import { Container } from "react-bootstrap";
 
 const Home = () => {
     return ( 
-        <div className="container">
-            <h1 className="text-center" styled={{paddingTop: "30%"}}>
-                Home
-            </h1>
-        </div>
+        <Container className="mt-5">
+    <h1>Página principal</h1> 
+    </Container>
      );
 }
  

@@ -1,12 +1,10 @@
-import React from "react";
+import { Container } from "react-bootstrap";
 
 const Nosotros = () => {
     return ( 
-        <div className="container">
-            <h1 className="text-center" styled={{paddingTop: "30%"}}>
-                Nosotros
-            </h1>
-        </div>
+        <Container className="mt-5">
+    <h1>Nosotros</h1> 
+    </Container>
      );
 }
  
