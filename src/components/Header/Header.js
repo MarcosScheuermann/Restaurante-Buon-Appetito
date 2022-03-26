@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
-  <Navbar.Brand href="/" className="buon-logo"><img
+  <Navbar.Brand href="/" className=""><img
           alt=""
           src="/img/Logo_BuonAppetito.jpg"
           width="100"
@@ -20,14 +20,14 @@ const Header = () => {
       <Nav.Link href="/">Página principal</Nav.Link>
       <Nav.Link href="/Login">Login</Nav.Link>
       <NavDropdown title="Mas" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="/Productos">Productos</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+        <NavDropdown.Item href="/Productos">Menú</NavDropdown.Item>
+        <NavDropdown.Item href="#">Promociones</NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item href="/Contacto">Contacto</NavDropdown.Item>
-        <NavDropdown.Item href="/Admin">Administrador</NavDropdown.Item>
-      </NavDropdown>
+        <NavDropdown.Item href="/#">Otros</NavDropdown.Item>
+              </NavDropdown>
     </Nav>
     <Nav>
+      <Nav.Link href="/Admin">Administrador</Nav.Link>
       <Nav.Link href="/Nosotros">Nosotros</Nav.Link>
       <Nav.Link href="/Contacto">Contacto</Nav.Link>
     </Nav>
