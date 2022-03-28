@@ -1,3 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+:root{
+  /* CSS HEX */
+--old-mauve: #531D35ff;
+--gold-crayola: #E5C697ff;
+--indian-yellow: #D49B4Eff;
+--carnelian: #A8231Eff;
+--gunmetal: #202932ff;
+--burnt-umber: #8F3220ff;
+--copper: #C57337ff;
+--saddle-brown: #935A2Fff;
+--dark-moss-green: #4C5B24ff;
+--rust: #B34D25ff;
+--rest-font: 'Italianno', cursive;
+}
+
+.rest-logo{
+  font-size: 20px !important;
+}
+
+.size-font{
+  font-size: 10px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
