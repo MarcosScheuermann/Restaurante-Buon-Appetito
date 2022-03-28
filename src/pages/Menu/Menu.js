@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
 
-const Productos = () => {
+const Menu = () => {
     return ( 
         <Container className="mt-5">
     <h1>Productos</h1> 
@@ -8,4 +8,4 @@ const Productos = () => {
      );
 }
  
-export default Productos;
+export default Menu;
