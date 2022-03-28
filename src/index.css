@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 
 :root{
@@ -22,17 +23,33 @@
 .size-font{
   font-size: 10px;
 }
+=======
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@1,100;1,200&display=swap');
+:root {
+    /* CSS HEX */
+    --dark-purple: #310a31ff;
+    --rhythm: #847996ff;
+    --opal: #88b7b5ff;
+    --cambridge-blue: #a7cab1ff;
+    --eggshell: #f4ecd6ff;
+    --waka-font: 'Roboto Serif', sans-serif;
+    --title-font: 'Roboto Serif', sans-serif;
+}
+
+.title-font {
+    font-family: var (--title-font);
+}
+
+.buon-logo {}
+>>>>>>> 6096d4b2be73d6fd377622dfd1f05630498e2728
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
