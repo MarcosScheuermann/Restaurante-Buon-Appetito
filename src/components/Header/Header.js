@@ -1,3 +1,7 @@
+
+const Header =() => {
+    return (<p> Soy un Header</p>);
+}
 import React from "react";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 
