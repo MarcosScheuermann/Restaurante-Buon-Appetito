@@ -14,10 +14,10 @@ import Productos from "./pages/Products";
 
 // import ProductDetail from "./pages/ProductDetail";
 // import Products from "./pages/Products";
-import Register from "./pages/Register";
+//import Register from "./pages/Register";
 // import AdminRoute from "./routes/AdminRoute";
-import PrivateRoute from "./routes/PrivateRoute";
-import PublicRoute from "./routes/PublicRoute";
+//import PrivateRoute from "./routes/PrivateRoute";
+//import PublicRoute from "./routes/PublicRoute";
 import './App.css';
 
 function App() {
