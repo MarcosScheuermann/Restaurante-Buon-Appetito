@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 
 :root{
@@ -17,31 +16,12 @@
 }
 
 .rest-logo{
-  font-size: 20px !important;
+  font-size: 40px !important;
 }
 
 .size-font{
-  font-size: 10px;
+  font-size: 20px !important;
 }
-=======
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@1,100;1,200&display=swap');
-:root {
-    /* CSS HEX */
-    --dark-purple: #310a31ff;
-    --rhythm: #847996ff;
-    --opal: #88b7b5ff;
-    --cambridge-blue: #a7cab1ff;
-    --eggshell: #f4ecd6ff;
-    --waka-font: 'Roboto Serif', sans-serif;
-    --title-font: 'Roboto Serif', sans-serif;
-}
-
-.title-font {
-    font-family: var (--title-font);
-}
-
-.buon-logo {}
->>>>>>> 6096d4b2be73d6fd377622dfd1f05630498e2728
 
 body {
     margin: 0;
