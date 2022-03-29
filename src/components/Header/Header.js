@@ -4,9 +4,8 @@ import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 
 const Header = () => {
   return (
-    
-      <Navbar collapseOnSelect expand="lg" variant="dark" className="header">
-      <Container >
+    <Navbar collapseOnSelect expand="lg" variant="dark" className="header">
+      <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -30,13 +29,10 @@ const Header = () => {
           </Navbar.Brand>
           <Nav>
             <Nav.Link href="/Admin">Administrador</Nav.Link>
-            
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-      
-    
   );
 };
 
