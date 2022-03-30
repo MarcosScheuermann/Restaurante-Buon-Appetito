@@ -1,10 +1,15 @@
+import CardPage from './pages/CardPage.js';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
     <>
-      <p>HOLA BUON APPETITO</p>
-      <br></br>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<CardPage/>} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
