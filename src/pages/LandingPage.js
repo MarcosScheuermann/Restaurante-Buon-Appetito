@@ -1,14 +1,11 @@
 import LandingMain from "../components/LandingMain/LandingMain";
 
-
 const LandingPage = () => {
-    return ( 
+  return (
+    <>
+      <LandingMain />
+    </>
+  );
+};
 
-      
-        <LandingMain/>  
-      
-
-     );
-}
- 
 export default LandingPage;

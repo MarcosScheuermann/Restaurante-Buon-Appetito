@@ -1,4 +1,4 @@
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@1,100;1,200&display=swap');
+    @import url("https://fonts.googleapis.com/css2?family=Italianno&family=Roboto+Serif:ital,wght@1,100;1,200&display=swap");
      :root {
         --old-mauve: #531D35ff;
         --gold-crayola: #E5C697ff;
@@ -12,6 +12,12 @@
         --rust: #B34D25ff;
         --imperial-red: #E13D3D;
         --green-pantone: #22A428;
+        --buon-font: 'Italianno', cursive;
+        --title-font: 'Roboto Serif', serif;
+    }
+    
+    .buon-font {
+        font-family: var (--buon-font);
     }
     
     .title-font {
@@ -20,7 +26,8 @@
     
     body {
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        font-family: 'Italianno', cursive;
+        font-family: 'Roboto Serif', serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }

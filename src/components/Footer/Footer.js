@@ -1,6 +1,7 @@
 //Footer Lucas
 import React from 'react';
 import './Footer.css';
+import {SiInstagram, SiFacebook} from 'react-icons/si';
 
 const Footer = () => {
     return ( 
@@ -9,7 +10,7 @@ const Footer = () => {
         <div className="row">
           {/* Column1 */}
           <div className="col">
-            <h4>Buon Appetito</h4>
+            
             <ui className="list-unstyled">
               <li>381-3333339</li>
               <li>San Miguel, Tucuman</li>
@@ -18,7 +19,7 @@ const Footer = () => {
           </div>
           {/* Column2 */}
           <div className="col">
-            <h4>Atención</h4>
+            
             <ui className="list-unstyled">
               <li>LUN-VIER</li>
               <li>09:00-21:00</li>
@@ -27,10 +28,10 @@ const Footer = () => {
           </div>
           {/* Column3 */}
           <div className="col">
-            <h4>REDES SOCIALES</h4>
+          
             <ui className="list-unstyled">
-              <li>INSTG</li>
-              <li>FACEB</li>
+              <li><SiInstagram/></li>
+              <li><SiFacebook/></li>
               <li>---</li>
             </ui>
           </div>

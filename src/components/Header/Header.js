@@ -1,3 +1,45 @@
+import "./Header.css";
+import React from "react";
+import { Navbar, Container, Nav } from "react-bootstrap";
+import {IoMdContacts} from 'react-icons/io';
+
+const Header = () => {
+  return (
+    <Navbar collapseOnSelect expand="lg" variant="dark" className="header">
+      <Container>
+        
+          <img
+            alt=""
+            src="/img/Logo_Buon_Appetito.png"
+            width="100"
+            height="100"
+            className="d-inline-block align-top"
+          />
+        
+        <a href="/LandingPage" className="titulo">Buon Appetito</a>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            
+            <Nav.Link href="/Login">Login</Nav.Link>
+            <Nav.Link href="/Home">Menú</Nav.Link>
+          </Nav>
+
+          <Nav>
+            <Nav.Link href="/Admin">Administrador</Nav.Link>
+            <Nav.Link href="/Contact">Contacto<IoMdContacts/></Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+};
+
+export default Header;
+
+
+
+
 // import { useEffect, useState } from "react";
 // import { Navbar, Nav, Container } from "react-bootstrap";
 // import { Link } from "react-router-dom";
@@ -72,43 +114,3 @@
 // =======
 
 //HEADER LUCAS
-
-import React from "react";
-import "./Header.css";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-
-const Header = () => {
-  return (
-    <Navbar collapseOnSelect expand="lg" variant="dark" className="header">
-      <Container>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/">Página principal</Nav.Link>
-            <Nav.Link href="/Login">Login</Nav.Link>
-            <NavDropdown title="Mas" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/Productos">Menú</NavDropdown.Item>
-              <NavDropdown.Item href="#">Promociones</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="/#">Contacto</NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Navbar.Brand href="/">
-            <img
-              alt=""
-              src="/img/Logo_Buon_Appetito.png"
-              width="100"
-              height="100"
-              className="d-inline-block align-top"
-            />
-          </Navbar.Brand>
-          <Nav>
-            <Nav.Link href="/Admin">Administrador</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
-};
-
-export default Header;

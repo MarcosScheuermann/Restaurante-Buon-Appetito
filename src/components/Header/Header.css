@@ -4,3 +4,12 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.titulo {
+    color: black;
+    font-weight: 600;
+    font-size: x-large;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    text-decoration: none;
+}
