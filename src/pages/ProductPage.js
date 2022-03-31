@@ -2,7 +2,7 @@ import {Container, Row, Col} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DetailsProduct from '../components/DetailsProduct/DetailsProduct.js'
 
-const CardPage = () => {
+const ProductPage = () => {
     return (
         <Container fluid>
             <Row>
@@ -17,4 +17,4 @@ const CardPage = () => {
     );
 }
  
-export default CardPage;
+export default ProductPage;
