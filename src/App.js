@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import LandingPage from "./pages/LandingPage";
+import LandingPage from "./pages/LandingPage";
 // import PrivateRoute from "./routes/PrivateRoute";
 // import PublicRoute from "./routes/PublicRoute";
 import Layout from "./components/Layout/Layout";
@@ -32,8 +32,12 @@ function App() {
           {/* <ProductsState> */}
           <Layout>
             <Routes>
-              {/* <Route path="*" element={<PublicRoute><LandingPage /></PublicRoute>} />
-              <Route path="/" element={<PublicRoute><LandingPage /></PublicRoute>} /> */}
+               <Route path="*" element={<LandingPage />}/>
+               <Route path="/" element={<Home />} />
+               <Route path="/login" element={<Login />} />
+               <Route path="/admin" element={<Admin />} />
+               <Route path="/contacto" element={<Contacto />} />
+              {/*<Route path="/" element={<PublicRoute><LandingPage /></PublicRoute>} /> }
               {/* -- */}
               {/* <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} /> */}
               {/* <Route path="/registro" element={<PublicRoute><Register /></PublicRoute>} /> */}
@@ -42,10 +46,14 @@ function App() {
               {/* <Route path="/admin" element={<AdminRoute><Admin /></AdminRoute>} /> */}
               {/* <Route path="/productos" element={<PrivateRoute><Products /></PrivateRoute>} />
               <Route path="/productos/:id" element={<PrivateRoute><ProductDetail /></PrivateRoute>} /> */}
+<<<<<<< HEAD
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/admin" element={<AdminRoute><Admin /></AdminRoute>} />
               <Route path="/contacto" element={<Contacto />} />
+=======
+              
+>>>>>>> 826f3c233394eeb6741ecae642648ce646e4b437
               {/* <Route path="/nosotros" element={<Nosotros />} />
               <Route path="/productos" element={<Productos />} /> */}
             </Routes>

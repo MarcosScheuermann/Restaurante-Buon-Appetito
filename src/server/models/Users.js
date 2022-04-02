@@ -17,6 +17,7 @@ const UserSchema = new Schema({
   },
   email:{
     type:String,
+    required:true,
     unique:true,
   },
   age:{
@@ -25,18 +26,6 @@ const UserSchema = new Schema({
   },
   hobbies:{
     type:Array
-  },
-  car:{
-    type:String,
-    enum:['Reanult','Ford']
-  },
-  likedBeer:{
-    type: [Schema.Types.ObjectId],
-    ref:'Product',
-  },
-  hatedBeer:{
-    type: Schema.Types.ObjectId,
-    ref:'Product',
   }
 },{
   versionKey:false,
