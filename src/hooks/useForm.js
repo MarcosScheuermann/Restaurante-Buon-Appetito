@@ -7,7 +7,7 @@ const useForm = (initialValues, submit, validations) => {
   useEffect(()=>{
     if(submitting){
       if(Object.keys(errors).length===0){
-        submit();
+        submit(values);
       }
       setSubmitting(false);
     }
@@ -15,20 +15,28 @@ const useForm = (initialValues, submit, validations) => {
   const handleKeyUp = (e) =>{
     setValues({
       ...values,
-      [e.target.name]:e.target.value
+      [e.target.name]: e.target.value
     })
   }
+  // const handleSubmit = (e) =>{
+  //   e.preventDefault();
+  //   if(validations){
+  //     setErrors(validations(values));
+  //     setSubmitting(true);
+  //     // errors = validations(values);
+  //     if(Object.keys(errors).length===0){
+  //       submit();
+  //     }
+  //   }else{
+  //     submit();
+  //   }
+  // }
   const handleSubmit = (e) =>{
     e.preventDefault();
-    if(validations){
-      errors = validations(values);
-      if(Object.keys(errors).length===0){
-        submit();
-      }
-    }else{
-      submit();
-    }
+    setErrors(validations(values));
+    setSubmitting(true);   
   }
+
   return {
     values,
     handleKeyUp,
