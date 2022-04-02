@@ -22,13 +22,14 @@ import Home from "./pages/Home";
 //import PrivateRoute from "./routes/PrivateRoute";
 //import PublicRoute from "./routes/PublicRoute";
 import './App.css';
+import AdminRoute from "./routes/AdminRoute";
 
 function App() {
   return (
     <>
       <Router>
-      <UserProvider>
-        {/* <ProductsState> */}
+        <UserProvider>
+          {/* <ProductsState> */}
           <Layout>
             <Routes>
               {/* <Route path="*" element={<PublicRoute><LandingPage /></PublicRoute>} />
@@ -36,22 +37,22 @@ function App() {
               {/* -- */}
               {/* <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} /> */}
               {/* <Route path="/registro" element={<PublicRoute><Register /></PublicRoute>} /> */}
-               {/* -- */}
+              {/* -- */}
               {/* <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} /> */}
               {/* <Route path="/admin" element={<AdminRoute><Admin /></AdminRoute>} /> */}
               {/* <Route path="/productos" element={<PrivateRoute><Products /></PrivateRoute>} />
               <Route path="/productos/:id" element={<PrivateRoute><ProductDetail /></PrivateRoute>} /> */}
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/admin" element={<Admin />} />
+              <Route path="/admin" element={<AdminRoute><Admin /></AdminRoute>} />
               <Route path="/contacto" element={<Contacto />} />
               {/* <Route path="/nosotros" element={<Nosotros />} />
               <Route path="/productos" element={<Productos />} /> */}
             </Routes>
-        </Layout>
-        {/* </ProductsState> */}
-      </UserProvider>
-    </Router>
+          </Layout>
+          {/* </ProductsState> */}
+        </UserProvider>
+      </Router>
     </>
   );
 }

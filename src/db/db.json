@@ -1,8 +1,26 @@
 {
     "users": [
         {
+            "id":1,
+            "name": "Marcos",
             "email": "marcos@gmail.com",
-            "password": "AA123SS"
+            "password": "AA123SS",
+            "role": "ADMIN"
+        },
+        {
+            "id":2,
+            "name": "Juan",
+            "email": "Juan@gmail.com",
+            "password": "QQ123EE",
+            "role": "USER"
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "Pizza",
+            "price": 900,
+            "image": "https://"
         }
     ]
 }
