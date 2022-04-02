@@ -9,8 +9,8 @@ export const validationLogin = (values) =>{
     }
     if(!values.password){
       errors.password = 'Campo Contraseña obligatorio.'
-    } else if(values.password.lenght < 8 ){
-      errors.password='La contraseña no puede tener menos de 8 caracteres.';
+    } else if(values.password.lenght < 3 ){
+      errors.password='La contraseña no puede tener menos de 3 caracteres.';
     } else if(values.password.lenght > 30 ){
       errors.password='La contraseña no puede tener más de 30 caracteres.';
     }
