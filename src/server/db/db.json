@@ -3,26 +3,42 @@
   "users": [
     {
       "id": 1,
-      "name": "admin",
+      "name": "Juan",
       "age": 42,
-      "email": "jev.monster@gmail.com",
+      "email": "jevillegas_123@hotmail.com",
       "password": "123",
       "role": "ADMIN"
     },
     {
       "id": 2,
-      "name": "Diego",
-      "age": 26,
-      "email": "diego@gmail.com",
-      "password": "123456",
-      "role": "USER"
+      "name": "Marcos",
+      "age": 30,
+      "email": "jms_3112@outlook.com",
+      "password": "123",
+      "role": "ADMIN"
     },
     {
       "id": 3,
-      "name": "Roman",
+      "name": "Lucas",
+      "age": 32,
+      "email": "lucasferruchi05@gmail.com",
+      "password": "123",
+      "role": "ADMIN"
+    },
+    {
+      "id": 4,
+      "name": "Fernanda",
+      "age": 29,
+      "email": "fernandatrujillo.code@gmail.com",
+      "password": "123",
+      "role": "USER"
+    },
+    {
+      "id": 5,
+      "name": "Gastón",
       "age": "29",
-      "email": "roman@gmail.com",
-      "password": "RR123GG",
+      "email": "gasdevalis@gmail.com",
+      "password": "123",
       "role": "USER"
     }
   ]
