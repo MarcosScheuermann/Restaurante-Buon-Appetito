@@ -1,4 +1,5 @@
 import ProductPage from "./pages/ProductPage";
+import CartPage from "./pages/CartPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import LandingPage from "./pages/LandingPage";
 // import PrivateRoute from "./routes/PrivateRoute";
@@ -47,6 +48,7 @@ function App() {
               <Route path="/admin" element={<Admin />} />
               <Route path="/contacto" element={<Contacto />} />
               <Route path='/producto' element={<ProductPage/>} />
+              <Route path='/carrito' element={<CartPage/>} />
               {/* <Route path="/nosotros" element={<Nosotros />} />
               <Route path="/productos" element={<Productos />} /> */}
             </Routes>

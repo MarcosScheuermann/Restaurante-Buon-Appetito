@@ -3,11 +3,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import DetailsProduct from '../components/DetailsProduct/DetailsProduct.js'
 
 const ProductPage = () => {
+
+    
+
     return (
-        <Container fluid>
+        <Container className='m-5'>
             <Row>
                 <Col xs={6}>
-                    <img className='w-100' src='https://img2.freepng.es/20180507/qww/kisspng-sicilian-pizza-neapolitan-pizza-pizza-margherita-t-5af1168b92f4e8.3388919715257493876019.jpg'/>
+                    <img className='w-100' src='https://www.cocinayvino.com/wp-content/uploads/2018/08/pizza-napolitana-2-e1534286138178-1200x675.jpg'/>
                 </Col>
                 <Col xs={6}>
                     <DetailsProduct></DetailsProduct>
