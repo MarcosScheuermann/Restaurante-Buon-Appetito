@@ -1,18 +1,18 @@
-import {Children, createContext} from "react"
+// import {Children, createContext} from "react"
 
-const ProductsContext = createContext();
+// const ProductsContext = createContext();
 
-const ProductsProvider = ({children}) => {
-    const [products, setProducts] = useState ([]);
-    return ( 
-        <ProductsContext.Provider value={{
-            products,
-            addProducts,
-            deleteProducts,
-        }} >
-            {children}
-        </ProductsContext.Provider>
-     );
-}
+// const ProductsProvider = ({children}) => {
+//     const [products, setProducts] = useState ([]);
+//     return ( 
+//         <ProductsContext.Provider value={{
+//             products,
+//             addProducts,
+//             deleteProducts,
+//         }} >
+//             {children}
+//         </ProductsContext.Provider>
+//      );
+// }
  
-export default ProductsProvider;
+// export default ProductsProvider;

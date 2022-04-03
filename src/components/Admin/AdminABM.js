@@ -1,10 +1,14 @@
 import { URL_PRODUCTS } from "../../constants";
-import useGet from "../../hooks/useGet";
 import { Button, Container, Table } from "react-bootstrap";
 import axios from "axios";
+import { useContext, useEffect } from "react";
+import ProductsContext from "../../context/products/ProductContext";
 
 const adminABM = () => {
-  const products = useGet(URL_PRODUCTS);
+  const {products, getProducts} = useContext (ProductsContext);
+  useEffect(()=>{
+    getProducts();
+  },[])
   const handleDelete = async (e) => {
     const id = e.target.parentElement.parentElement.id;
     await axios.delete(URL_PRODUCTS+"/"+id)
