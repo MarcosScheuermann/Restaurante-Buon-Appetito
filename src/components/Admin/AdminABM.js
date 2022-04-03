@@ -11,7 +11,7 @@ const adminABM = () => {
   },[])
   const handleDelete = async (e) => {
     const id = e.target.parentElement.parentElement.id;
-    await axios.delete(URL_PRODUCTS+"/"+id)
+    await axios.delete(URL_PRODUCTS +"/"+ id)
   }
   return (
     <>

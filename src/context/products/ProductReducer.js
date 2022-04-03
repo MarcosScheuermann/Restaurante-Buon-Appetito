@@ -1,6 +1,6 @@
 import {
-  ADD_PRODUCT,
-  DELETE_PRODUCT,
+//   ADD_PRODUCT,
+//   DELETE_PRODUCT,
   ERROR_PRODUCTS,
   GET_PRODUCTS,
 } from "../../constants";
@@ -17,18 +17,19 @@ export default (state, action) => {
         ...state,
         productsError: "Error en la carga",
       };
-    case DELETE_PRODUCT:
-      return {
-        ...state,
-        products: state.products.filter(
-          (product) => product.id != action.payload
-        ),
-      };
-    case ADD_PRODUCT:
-      console.log(action.payload);
-      return {
-        ...state,
-        products: state.products.push(action.payload),
-      };
+    // case DELETE_PRODUCT:
+    //   return {
+    //     ...state,
+    //     products: state.products.filter(
+    //       (product) => product.id != action.payload
+    //     ),
+    //   };
+    // case ADD_PRODUCT:
+    //   console.log(action.payload);
+    //   return {
+    //     ...state,
+    //     products: state.products.push(action.payload),
+    //   };
   }
 };
+

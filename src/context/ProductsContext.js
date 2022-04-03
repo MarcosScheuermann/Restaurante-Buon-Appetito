@@ -15,4 +15,4 @@
 //      );
 // }
  
-// export default ProductsProvider;
+export default ProductsProvider;
