@@ -1,11 +1,11 @@
 import axios from "axios";
 import { useReducer } from "react";
-import { ERROR_PRODUCTS, URL_PRODUCTS } from "../../constants";
-import {GET_PRODUCTS} from "../../constants";
 import ProductReducer from "./ProductsReducer";
 import ProductContext from "./ProductsContext";
+import { ERROR_PRODUCTS, GET_PRODUCTS, URL_PRODUCTS } from "../../constants";
 
-const ProductsState = ({ children }) => {
+
+const ProductsState = ({children}) => {
   const initialState = {
     products: [],
     productsError: "",
@@ -27,33 +27,33 @@ const ProductsState = ({ children }) => {
     }
   };
 
-//   const deleteProduct = async (id) => {
-//     try {
-//       await axios.delete(URL_PRODUCTS + id);
-//       dispatch({
-//         type: DELETE_PRODUCT,
-//         payload: id
-//       });
-//     } catch (error) {
-//       dispatch({
-//         type: ERROR_PRODUCTS,
-//       });
-//     }
-//   };
+  // const deleteProduct = async (id) => {
+  //   try {
+  //     await axios.delete(URL_PRODUCTS + id);
+  //     dispatch({
+  //       type: DELETE,
+  //       payload: id
+  //     });
+  //   } catch (error) {
+  //     dispatch({
+  //       type: ERROR_PRODUCTS,
+  //     });
+  //   }
+  // };
 
-//   const addProduct = async (data) => {
-//     try {
-//       await axios.post(URL_PRODUCTS, data);
-//       dispatch({    
-//         type: ADD_PRODUCT,
-//         payload: data
-//       });
-//     } catch (error) {
-//       dispatch({
-//         type: ERROR_PRODUCTS,
-//       });
-//     }
-//   };
+  // const addProduct = async (data) => {
+  //   try {
+  //     await axios.post(URL_PRODUCTS, data);
+  //     dispatch({    
+  //       type: ADD_PRODUCT,
+  //       payload: data
+  //     });
+  //   } catch (error) {
+  //     dispatch({
+  //       type: ERROR_PRODUCTS,
+  //     });
+  //   }
+  // };
 
   return (
     <ProductContext.Provider

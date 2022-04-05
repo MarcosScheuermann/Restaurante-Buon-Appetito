@@ -41,5 +41,31 @@
       "password": "123",
       "role": "USER"
     }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Pizza",
+      "price": 900,
+      "image": "https://"
+    },
+    {
+      "id": 2,
+      "name": "Pizza2",
+      "price": 800,
+      "image": "https://"
+    },
+    {
+      "id": 3,
+      "name": "Pizza3",
+      "price": 700,
+      "image": "https://"
+    },
+    {
+      "id": 4,
+      "name": "Pizza4",
+      "price": 900,
+      "image": "https://"
+    }
   ]
 }
