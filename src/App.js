@@ -12,26 +12,26 @@ import AdminRoute from "./routes/AdminRoute";
 import PublicRoute from "./routes/PublicRoute";
 import Login from "./pages/Login";
 import UserProvider from "./context/UserContext";
-import ProductsState from "./context/products/ProductState";
+import ProductsProvider from "./context/ProductsContext";
 
 function App() {
   return (
     <>
       <Router>
         <UserProvider>
-          <ProductsState>
+          <ProductsProvider>
             <Layout>
               <Routes>
-                <Route path="*" element={<PublicRoute><LandingPage /></PublicRoute>} />
-                <Route path="/" element={<PublicRoute><Home /></PublicRoute>} />
+                <Route path="*" element={<LandingPage />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/admin" element={<AdminRoute><Admin /></AdminRoute>} />
-                <Route path="/contacto" element={<PublicRoute><Contacto /></PublicRoute>} />
-                <Route path="/productos" element={<PrivateRoute><Products /></PrivateRoute>} />
-                <Route path="/productos/:id" element={<PrivateRoute><ProductDetail /></PrivateRoute>} />
+                <Route path="/admin" element={<Admin />} />
+                <Route path="/contacto" element={<Contacto />} />
+                <Route path="/productos" element={<Products />} />
+                <Route path="/productos/:id" element={<ProductDetail />} />
               </Routes>
             </Layout>
-        </ProductsState>
+        </ProductsProvider>
         </UserProvider>
       </Router>
     </>

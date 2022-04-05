@@ -2,13 +2,19 @@ import { URL_PRODUCTS } from "../../constants";
 import { Button, Container, Table } from "react-bootstrap";
 import axios from "axios";
 import { useContext, useEffect } from "react";
-import ProductsContext from "../../context/products/ProductContext";
+import ProductsContext from "../../context/ProductsContext";
 
 const adminABM = () => {
-  const {products, getProducts} = useContext (ProductsContext);
-  useEffect(()=>{
-    getProducts();
-  },[])
+
+ 
+  const {products} = useContext (ProductsContext);
+ 
+  console.log(products);
+
+  // useEffect(()=>{
+    
+  // },[])
+
   const handleDelete = async (e) => {
     const id = e.target.parentElement.parentElement.id;
     await axios.delete(URL_PRODUCTS +"/"+ id)
@@ -28,7 +34,7 @@ const adminABM = () => {
                 </tr>
             </thead>
           <tbody>
-            {products.map(({ id, name, price, image }) => (
+            {products?.map(({ id, name, price, image }) => (
               <tr key={id} id={id}>
                 <td>{id}</td>
                 <td>{name}</td>
