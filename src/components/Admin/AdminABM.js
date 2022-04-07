@@ -6,9 +6,11 @@ import ProductsContext from "../../context/products/ProductContext";
 
 const adminABM = () => {
   const {products, getProducts} = useContext (ProductsContext);
-  useEffect(()=>{
-    getProducts();
-  },[])
+  
+  // useEffect(()=>{
+  //   getProducts();
+  // },[])
+
   const handleDelete = async (e) => {
     const id = e.target.parentElement.parentElement.id;
     await axios.delete(URL_PRODUCTS +"/"+ id)
