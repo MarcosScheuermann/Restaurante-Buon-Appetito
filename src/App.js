@@ -32,7 +32,7 @@ function App() {
                 <Route path="/productos/:id" element={<ProductDetail />} />
               </Routes>
             </Layout>
-        </ProductsProvider>
+          </ProductsProvider>
         </UserProvider>
       </Router>
     </>

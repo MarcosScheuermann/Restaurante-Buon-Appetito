@@ -1,15 +1,14 @@
+import { useContext } from "react";
+import ProductsContext from "../../context/ProductsContext";
 import { URL_PRODUCTS } from "../../constants";
 import { Button, Container, Table } from "react-bootstrap";
 import axios from "axios";
-import { useContext, useEffect } from "react";
-import ProductsContext from "../../context/ProductsContext";
 
-const adminABM = () => {
+const AdminABM = () => {
 
- 
-  const {products} = useContext (ProductsContext);
- 
-  console.log(products);
+const {products} = useContext (ProductsContext);
+
+console.log(products);
 
   // useEffect(()=>{
     
@@ -55,4 +54,4 @@ const adminABM = () => {
   );
 };
 
-export default adminABM;
+export default AdminABM;
