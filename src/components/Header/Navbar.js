@@ -16,9 +16,9 @@ const Navbar = ({ navbarLinks }) => {
         <span className="navbar_logo">BonAppetito</span>
 
         {menuClick?(
-          <RiCloseFill size={25} className="navbar_menu" onClick={toggleMenu}/>
-        ):(
           <HiMenuAlt2 size={25} className="navbar_menu" onClick={toggleMenu}/>
+          ):(
+          <RiCloseFill size={25} className="navbar_menu" onClick={toggleMenu}/>
         )}
 
       <ul className={menuClick ? "navbar_list" : "navbar_list navbar_list--active"}>
