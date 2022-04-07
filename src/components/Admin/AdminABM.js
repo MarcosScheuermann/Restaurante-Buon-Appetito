@@ -1,15 +1,12 @@
+import { useContext } from "react";
+import ProductsContext from "../../context/products/ProductContext";
 import { URL_PRODUCTS } from "../../constants";
 import { Button, Container, Table } from "react-bootstrap";
 import axios from "axios";
-import { useContext, useEffect } from "react";
-import ProductsContext from "../../context/products/ProductContext";
 
-const adminABM = () => {
-  const {products, getProducts} = useContext (ProductsContext);
-  
-  // useEffect(()=>{
-  //   getProducts();
-  // },[])
+const AdminABM = () => {
+
+  const products = useContext (ProductsContext);
 
   const handleDelete = async (e) => {
     const id = e.target.parentElement.parentElement.id;
@@ -51,4 +48,4 @@ const adminABM = () => {
   );
 };
 
-export default adminABM;
+export default AdminABM;

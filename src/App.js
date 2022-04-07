@@ -7,12 +7,8 @@ import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
 import Products from "./pages/Products";
 import "./App.css";
-import PrivateRoute from "./routes/PrivateRoute";
-import AdminRoute from "./routes/AdminRoute";
-import PublicRoute from "./routes/PublicRoute";
 import Login from "./pages/Login";
 import UserProvider from "./context/UserContext";
-import ProductsState from "./context/products/ProductState";
 
 function App() {
   return (
