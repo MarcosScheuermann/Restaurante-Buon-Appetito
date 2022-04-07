@@ -1,23 +1,22 @@
-//import LandingMain from "../components/LandingMain/LandingMain";
-
-import Hero from "../components/Hero/Hero";
-import Slider from "../components/Slider/Slider";
+import "./LandingPage.css";
 import chef from "../assets/LandingImg/chef.jpg";
 import pizza from "../assets/LandingImg/pizza.jpg";
 import front from "../assets/LandingImg/front.jpg";
 import spaghetti from "../assets/LandingImg/spaghetti.jpg";
-import "../App.css";
+import Hero from "../components/Hero/Hero";
+import Slider from "../components/Slider/Slider";
 
 
-const LandingPage = () => {
+function LandingPage  ()  {
   return (
     
       <div className="App">
         <Hero imageSrc={chef}/>
         
-        <Slider imageSrc={pizza}
+        <Slider 
+        imageSrc={pizza}
         title={"Explora sabores"}
-        subtitle={"nuestro sabores son únicos!"}/>
+        subtitle={"nuestro sabores son únicos!"}flipped={true}/>
         <Slider imageSrc={front}
         title={"Explora sabores"}
         subtitle={"nuestro sabores son únicos"}/>
