@@ -5,24 +5,32 @@ import front from "../assets/LandingImg/front.jpg";
 import spaghetti from "../assets/LandingImg/spaghetti.jpg";
 import Hero from "../components/Hero/Hero";
 import Slider from "../components/Slider/Slider";
+import Navbar from "../components/Header/Navbar";
 
+const navbarLinks = [
+  { url: "#", title: "Ingresar" },
+  { url: "#", title: "Contacto" },
+  { url: "#", title: "Administrador" },
+];
 
 function LandingPage  ()  {
   return (
     
       <div className="App">
+        <Navbar navbarLinks={navbarLinks} />
+
         <Hero imageSrc={chef}/>
         
         <Slider 
         imageSrc={pizza}
-        title={"Explora sabores"}
-        subtitle={"nuestro sabores son únicos!"}flipped={true}/>
+        title={"Explora los sabores"}
+        subtitle={"dejate llevar por tus sentidos!"}flipped={true}/>
         <Slider imageSrc={front}
-        title={"Explora sabores"}
-        subtitle={"nuestro sabores son únicos"}/>
+        title={"Como en casa"}
+        subtitle={"todo en manos de nuestro chef!"}/>
         <Slider imageSrc={spaghetti}
-        title={"Explora sabores"}
-        subtitle={"nuestro sabores son únicos"} flipped={true}/>
+        title={"Disfruta el momento"}
+        subtitle={"crea recuerdos con las personas que quieres!"} flipped={true}/>
         
       </div>
     

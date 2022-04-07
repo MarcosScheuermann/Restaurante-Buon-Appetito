@@ -4,8 +4,8 @@ import "./Hero.css";
 const Hero = ({imageSrc}) => {
     return ( 
         <div className="hero">
-            <img src={imageSrc} alt="Menu" className="hero__image" />
-            <h1 className="hero__title">Bienvenidos a Bon Appetito</h1>
+            <img src={imageSrc} alt="Menu" className="hero_image" />
+            <h1 className="hero_title">Bienvenido a Bon Appetito.</h1>
         </div>
      );
 };

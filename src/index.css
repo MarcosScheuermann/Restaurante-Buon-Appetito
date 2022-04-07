@@ -1,3 +1,17 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Italianno', cursive;
+    font-family: 'Roboto Serif', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+
 /*@import url("https://fonts.googleapis.com/css2?family=Italianno&family=Roboto+Serif:ital,wght@1,100;1,200&display=swap");*/
 
 
@@ -27,19 +41,6 @@
 /*.title-font {
         font-family: var (--title-font);
     }*/
-
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Italianno', cursive;
-    font-family: 'Roboto Serif', serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
 
 
 /*.navb {
