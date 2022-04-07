@@ -4,7 +4,7 @@ import useGet from "../hooks/useGet";
 import { URL_PRODUCTS } from "../constants";
 
 const Products = () => {
-  const products = useGet(URL_PRODUCTS);
+  const products = useGet (URL_PRODUCTS);
 
   return (
     <Container className="mt-5">
