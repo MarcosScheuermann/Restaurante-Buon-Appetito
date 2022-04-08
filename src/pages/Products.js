@@ -1,4 +1,47 @@
-import { Container } from "react-bootstrap";
+import axios from "axios";
+import {useEffect, useState} from "react";
+import ProductCard from "../components/ProductCard/ProductCard"; 
+import {Row, Col } from 'react-bootstrap'
+ 
+
+const Products = () => {
+ const[products,setProducts] = useState([]);
+    useEffect(()=>{
+        const getProducts = async()=>{
+          try{
+            const response = await axios.get('http://localhost:3000/products');
+            const {data} = response;
+             setProducts(data);
+          }catch (error){
+              console.warn(error);
+          }
+        }
+        getProducts();
+    },[])
+    return ( 
+        <Row xs={1} md={3} className="g-2">
+        {products.map((product) => (
+          <Col>
+            <ProductCard
+            className="m-3"
+            id={products.id}
+            title={products.name}
+            description={products.description}
+            image={products.image}
+            />
+          </Col>
+        ))}
+      </Row>
+     );
+}
+ 
+export default Products;
+
+
+
+//Juan
+
+/*import { Container } from "react-bootstrap";
 
 const Productos = () => {
     return ( 
@@ -8,4 +51,4 @@ const Productos = () => {
      );
 }
  
-export default Productos;
+export default Productos;*/
