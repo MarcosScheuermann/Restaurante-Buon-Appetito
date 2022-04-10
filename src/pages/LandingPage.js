@@ -1,12 +1,16 @@
+
 import LandingMain from "../components/LandingMain/LandingMain";
 
 
 const LandingPage = () => {
     return ( 
-
-      
-        <LandingMain/>  
-      
+        
+        <>
+         <LandingMain/> 
+        </>
+       
+        
+    
 
      );
 }
