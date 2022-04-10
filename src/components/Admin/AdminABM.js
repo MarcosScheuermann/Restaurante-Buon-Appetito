@@ -1,22 +1,32 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import ProductsContext from "../../context/ProductsContext";
 import { GET_PRODUCTS, URL_PRODUCTS } from "../../constants";
 import { Button, Container, Table } from "react-bootstrap";
-import axios from "axios";
+import axiosClient from "../../config/axiosClient";
 import useGet from "../../hooks/useGet";
 import ProductsProvider from "../../context/ProductsContext";
 
 const AdminABM = () => {
+  const [products, setProducts] = useState([]);
 
-  const products = useGet(URL_PRODUCTS);
+  // const products = useGet(URL_PRODUCTS);
 
-  console.log(products);
+  const getProducts = async () => {
+    try {
+      const response = await axiosClient.get("/products");
+      setProducts(response.data.products);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  useEffect(()=>{
+    getProducts();
+  },[])
+
+
 
 // const {products} = useContext (ProductsContext);
 
-  // useEffect(()=>{
-    
-  // },[])
 
   // const handleDelete = async (e) => {
   //   const id = e.target.parentElement.parentElement.id;
@@ -27,14 +37,13 @@ const AdminABM = () => {
       <p>SOY ADMINISTRADOR</p>
 
       <table>
-        {
-          products.map(product=>(
-            <tr>
-              <td>{product.name}</td>
-            </tr>
-          ))
-          
-        }
+        {products.map((product, index) => (
+          <tr>
+            <td>
+              <p key={index}>{product.name}</p>
+            </td>
+          </tr>
+        ))}
       </table>
     </>
     // <>

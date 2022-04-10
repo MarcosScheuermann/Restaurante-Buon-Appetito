@@ -9,6 +9,7 @@ const ProductsProvider = ({children}) => {
     return ( 
         <ProductsContext.Provider value={{
             products
+            
         }}>
 
             {children}
