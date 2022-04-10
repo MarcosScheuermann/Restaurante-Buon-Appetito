@@ -1,14 +1,17 @@
-import ProductCard from "../components/ProductCard/ProductCard";
+
 import { Row, Col, Container } from "react-bootstrap";
 import useGet from "../hooks/useGet";
+import ProductCard from "../components/ProductCard/ProductCard";
 import { URL_PRODUCTS } from "../constants";
 
-const Products = () => {
-  const products = useGet (URL_PRODUCTS);
-
+export const Products = () => {
+  
+  const products = useGet(URL_PRODUCTS);
+  
   return (
     <Container className="mt-5">
-      <Row xs={1} md={3} className="g-2">
+      <Row xs={1} md={3} className="g-4">
+        <p>Lista de Productos</p>
         {products.map((product) => (
           <Col key={product.id}>
             <ProductCard

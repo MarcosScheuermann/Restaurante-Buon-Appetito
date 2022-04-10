@@ -1,4 +1,4 @@
-import {createContext, useState} from "react"
+import { createContext, useState } from "react"
 
 export const ProductsContext = createContext();
 
@@ -8,10 +8,10 @@ const ProductsProvider = ({children}) => {
     
     return ( 
         <ProductsContext.Provider value={{
-            products,
-            // addProducts,
-            // deleteProducts,
-        }} >
+            products
+            
+        }}>
+
             {children}
 
         </ProductsContext.Provider>
