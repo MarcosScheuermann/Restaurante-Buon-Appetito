@@ -1,12 +1,10 @@
 //LOGIN JUAN
 
-import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
 import {Form, Button, Alert} from 'react-bootstrap';
 import Swal from "sweetalert2";
 import { LOGIN_VALUES, URL_USERS } from '../../constants';
 import { UserContext } from '../../context/UserContext';
-import axiosClient from '../../config/axiosClient';
 import { validationLogin } from '../../helpers/validations';
 import useForm from '../../hooks/useForm';
 import {BiUserPin} from 'react-icons/bi';
@@ -22,8 +20,7 @@ const LoginForm = () =>{
   useEffect(()=>{
     if(auth){
       navigate('/home');
-      const userActivo = localStorage.getItem('userActivo');
-      console.log(userActivo);
+      const userActivo = JSON.parse(localStorage.getItem('user'));
       sweetalert2('Bienvenido!', userActivo);
     }
   },[auth])
@@ -52,31 +49,6 @@ const LoginForm = () =>{
     })
 
   }
-
-  // const checkData = async ()=>{
-  //   const response = await axios.get(URL_USERS);
-  //   console.log(response);
-  //   const {data} = response;
-  //   const userFound = data.find(user=>user.email === values.email);
-  //   console.log(userFound);
-  //   if(userFound){
-  //     if(userFound.password === values.password){
-  //       localStorage.setItem('user',JSON.stringify(userFound));
-  //       setUser(userFound);        
-  //       let usuario1 = JSON.parse(localStorage.getItem('user'));
-  //       sweetalert2('Bienvenido!', usuario1.name);
-  //       navigate('/productos');
-  //     }else{        
-  //       setError(true);
-  //       sweetalert2('Atención!', 'Contraseña inválida.');         
-  //     }
-  //   }else{
-  //     sweetalert2('Atención!', 'Usuario inexistente.');  
-  //     setError(true)
-  //   }
-  // }
-
-
 
   const { handleKeyUp, handleSubmit, values,errors} = useForm(LOGIN_VALUES, login, validationLogin) 
  

@@ -5,9 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 // import ProductsState from "./context/products/ProductsState";
 import UserProvider from "./context/UserContext";
-// import Admin from "./pages/Admin";
-// import Home from "./pages/Home";
-// import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";
 import Admin from "./pages/Admin";
 import Contacto from "./pages/Contact";
@@ -19,10 +16,11 @@ import PrivateRoute from "./routes/PrivateRoute";
 
 // import ProductDetail from "./pages/ProductDetail";
 // import Products from "./pages/Products";
-//import Register from "./pages/Register";
+import Register from "./pages/Register";
 // import AdminRoute from "./routes/AdminRoute";
 //import PublicRoute from "./routes/PublicRoute";
 import './App.css';
+import AboutUs from "./components/AboutUs/AboutUs";
 
 function App() {
   return (
@@ -45,10 +43,12 @@ function App() {
               <Route path="/" element={<LandingPage />} />
               <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
               <Route path="/login" element={<Login />} />
+              <Route path="/registro" element={<Register />} />
               <Route path="/admin" element={<Admin />} />
               <Route path="/contacto" element={<Contacto />} />
-              {/* <Route path="/nosotros" element={<Nosotros />} />
-              <Route path="/productos" element={<Productos />} /> */}
+              <Route path="/AboutUs" element={<AboutUs />} />
+               
+              {/* <Route path="/productos" element={<Productos />} />  */}
             </Routes>
         </Layout>
         {/* </ProductsState> */}

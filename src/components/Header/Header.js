@@ -91,6 +91,7 @@ const Header = () => {
               <NavDropdown.Item href="#">Promociones</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/#">Contacto</NavDropdown.Item>
+              <NavDropdown.Item href="/AboutUs">Nosotros</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Navbar.Brand href="/">
