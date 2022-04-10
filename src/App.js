@@ -11,7 +11,9 @@ import UserProvider from "./context/UserContext";
 import Login from "./pages/Login";
 import Admin from "./pages/Admin";
 import Contacto from "./pages/Contact";
+import LandingPage from "./pages/LandingPage";
 import Home from "./pages/Home";
+import PrivateRoute from "./routes/PrivateRoute";
 //import Nosotros from "./pages/AboutUs";
 //import Productos from "./pages/Products";
 
@@ -19,7 +21,6 @@ import Home from "./pages/Home";
 // import Products from "./pages/Products";
 //import Register from "./pages/Register";
 // import AdminRoute from "./routes/AdminRoute";
-//import PrivateRoute from "./routes/PrivateRoute";
 //import PublicRoute from "./routes/PublicRoute";
 import './App.css';
 
@@ -41,7 +42,8 @@ function App() {
               {/* <Route path="/admin" element={<AdminRoute><Admin /></AdminRoute>} /> */}
               {/* <Route path="/productos" element={<PrivateRoute><Products /></PrivateRoute>} />
               <Route path="/productos/:id" element={<PrivateRoute><ProductDetail /></PrivateRoute>} /> */}
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
               <Route path="/login" element={<Login />} />
               <Route path="/admin" element={<Admin />} />
               <Route path="/contacto" element={<Contacto />} />
