@@ -13,6 +13,7 @@ import "./App.css";
 import Login from "./pages/Login";
 import UserProvider from "./context/UserContext";
 import ProductsProvider from "./context/ProductsContext";
+import AdminABM from "./components/Admin/AdminABM";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
                 <Route path="/home" element={<Home />} />
                 <Route path="/contacto" element={<Contacto />} />
                 <Route path="/productos" element={<Products />} />
-                <Route path="/productos/:id" element={<ProductDetail />} />
+                {/* <Route path="/productos/:id" element={<ProductDetail />} /> */}
               </Routes>
             </Layout>
           </ProductsProvider>
