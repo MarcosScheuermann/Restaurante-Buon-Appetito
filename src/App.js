@@ -12,7 +12,6 @@ function App() {
         {/* <ProductsState> */}
           <Layout>
             <Routes>
-            <Route path="*" element={<PublicRoute><LandingPage /></PublicRoute>} />
             <Route path="/" element={<PublicRoute><LandingPage /></PublicRoute>} />
             </Routes>
         </Layout>

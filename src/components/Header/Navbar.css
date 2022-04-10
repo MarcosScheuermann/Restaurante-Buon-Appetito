@@ -3,7 +3,7 @@
     top: 0px;
     height: 70px;
     background-color: black;
-    opacity: 0.55;
+    opacity: 0.8 !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,10 +87,10 @@
         margin: 0px;
         border-width: 0px;
         background-color: black;
-        opacity: 0.65;
+        opacity: 0.8 !important;
     }
     .navbar_link:hover {
         border-width: 0px;
-        opacity: 0.9;
+        opacity: 0.8 !important;
     }
 }

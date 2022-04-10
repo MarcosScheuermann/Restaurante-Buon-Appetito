@@ -3,14 +3,14 @@ import chef from "../assets/LandingImg/chef.jpg";
 import pizza from "../assets/LandingImg/pizza.jpg";
 import front from "../assets/LandingImg/front.jpg";
 import spaghetti from "../assets/LandingImg/spaghetti.jpg";
-import Hero from "../components/Hero/Hero";
+import Encabezado from "../components/Encabezado/Encabezado";
 import Slider from "../components/Slider/Slider";
 import Navbar from "../components/Header/Navbar";
 
 const navbarLinks = [
   { url: "#", title: "Ingresar" },
   { url: "#", title: "Contacto" },
-  { url: "#", title: "Administrador" },
+  { url: "#", title: "Nosotros" },
 ];
 
 function LandingPage  ()  {
@@ -19,7 +19,7 @@ function LandingPage  ()  {
       <div className="App">
         <Navbar navbarLinks={navbarLinks} />
 
-        <Hero imageSrc={chef}/>
+        <Encabezado imageSrc={chef}/>
         
         <Slider 
         imageSrc={pizza}

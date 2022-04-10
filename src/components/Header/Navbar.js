@@ -13,7 +13,7 @@ const Navbar = ({ navbarLinks }) => {
 
   return (
     <nav className="navbar">
-        <span className="navbar_logo">BonAppetito</span>
+        <span className="navbar_logo">Buon Appetito</span>
 
         {menuClick?(
           <HiMenuAlt2 size={25} className="navbar_menu" onClick={toggleMenu}/>
