@@ -4,10 +4,9 @@ import { useContext } from 'react';
 import CartContext from '../../context/CartContext'
 
 const CartBadge = () => {
-  const [[cart, setCart]] = useContext (CartContext);
 
   return (
-    <Button variant="light">
+    <Button variant="light" className='mt-3'>
       Cart
       <Badge bg="secondary" className='ms-2'>
         0

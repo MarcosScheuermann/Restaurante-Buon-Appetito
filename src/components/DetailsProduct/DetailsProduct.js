@@ -14,6 +14,9 @@ const DetailsProduct = () => {
         <Form.Text className="text-danger">
           <h2>$20</h2>
         </Form.Text>
+        <Form.Text className="text-dark">
+          <h3>Nombre del producto</h3>
+        </Form.Text>
         <Form.Text>
           <h6>Descripcion detallada del producto</h6>
         </Form.Text>
@@ -23,10 +26,10 @@ const DetailsProduct = () => {
         <Form.Check type="checkbox" label="Medium" className="me-3" />
         <Form.Check type="checkbox" label="Small" className="me-3" />
       </Form.Group>
-      <Button onClick={(e)=>{handleCart(e)}} variant="success" type="submit" className="me-3">
+      <Button onClick={(e)=>{handleCart(e)}} variant='success' type="submit" className="me-3 cartButton">
         Agregar al Carrito
       </Button>
-      <Button variant="white" className="me-3">
+      <Button variant="secondary" className="me-3">
         Volver
       </Button>
     </Form>

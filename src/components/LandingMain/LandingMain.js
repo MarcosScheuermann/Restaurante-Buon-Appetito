@@ -1,7 +1,52 @@
 import { Carousel } from "react-bootstrap";
-import "./LandingMain.css" 
+import "./LaindingMain.css";
+
 
 const LandingMain = () => {
+  return (
+    <Carousel fade>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src="assets/img/photocarousel1.jpg"
+          alt="Cocina Italiana"
+        />
+        <Carousel.Caption>
+          <h3>Cocina Tradicional Italiana</h3>
+          <p>Elaborada con productos naturales y de la mejor calidad.                                 
+            No te pierdas de los exquisitos vinos, nos acompañan en la selección "DIVINOS"
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src="assets/img/photocarousel2.jpg"
+          alt="Pizza Italiana"
+        />
+
+        <Carousel.Caption>
+          <h3>Variedad de Pizzas</h3>
+          <p>Resetas tradicionales que te trasladan a la Italia</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 carousel-image"
+          src="assets/img/photocarousel3.jpg"
+          alt="Pasta Italiana"
+        />
+
+        <Carousel.Caption>
+          <h3>Pasta Squisita</h3>
+          <p>Inigualable sabor producto de la elaboración fresca</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+  );
+};
+export default LandingMain;
+/*const LandingMain = () => {
     return (
       <Carousel>
         <Carousel.Item>
@@ -43,6 +88,4 @@ const LandingMain = () => {
         </Carousel.Item>
       </Carousel>
     );
-}
- 
-export default LandingMain;
+}*/

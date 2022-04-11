@@ -38,7 +38,7 @@ const RegisterForm = () => {
         <Form.Label>Email</Form.Label>
         <Form.Control onKeyUp={handleKeyUp} type="email" placeholder="Enter email" name="email" />
         <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
+        No compartiremos tu correo con nadie más.
         </Form.Text>
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicNumber">
