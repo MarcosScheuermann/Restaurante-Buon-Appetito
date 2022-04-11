@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 
 import LandingMain from "../components/LandingMain/LandingMain";
-=======
 import "./LandingPage.css";
 import chef from "../assets/LandingImg/chef.jpg";
 import pizza from "../assets/LandingImg/pizza.jpg";
@@ -10,7 +8,6 @@ import spaghetti from "../assets/LandingImg/spaghetti.jpg";
 import Encabezado from "../components/Encabezado/Encabezado";
 import Slider from "../components/Slider/Slider";
 import Navbar from "../components/Header/Navbar";
->>>>>>> ac054a868edfad827e20869b86bf15f2c2b3b302
 
 const navbarLinks = [
   { url: "#", title: "Ingresar" },
@@ -18,17 +15,15 @@ const navbarLinks = [
   { url: "#", title: "Nosotros" },
 ];
 
-<<<<<<< HEAD
-const LandingPage = () => {
-    return ( 
+// const LandingPage = () => {
+//     return ( 
         
-        <>
-         <LandingMain/> 
-        </>
+//         <>
+//          <LandingMain/> 
+//         </>
        
         
     
-=======
 function LandingPage  ()  {
   return (
     
@@ -52,6 +47,5 @@ function LandingPage  ()  {
     
   );
 };
->>>>>>> ac054a868edfad827e20869b86bf15f2c2b3b302
 
 export default LandingPage;
