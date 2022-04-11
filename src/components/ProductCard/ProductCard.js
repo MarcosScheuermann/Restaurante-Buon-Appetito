@@ -7,7 +7,7 @@ const ProductCard = ({id, title, price, image}) => {
       <Card.Img variant="top" src={image} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
-        <Card.Text>Precio: 200{price}</Card.Text>
+        <Card.Text>Precio: 900{price}</Card.Text>
         <Link variant="primary" to={`/productos/${id}`}className="btn btn-primary">Ver</Link>
       </Card.Body>
     </Card>
