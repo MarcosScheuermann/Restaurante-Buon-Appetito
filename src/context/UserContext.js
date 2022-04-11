@@ -33,7 +33,7 @@ const UserProvider = ({children}) => {
         const response = await axiosClient.get('/users/auth');
         setAuth(true);
         setUser(response.data.user); 
-        localStorage.setItem('userActivo', response.data.user.name);
+        localStorage.setItem('user', response.data.user.name);
       } catch (error) {
         console.log(error);
         setAuth(false);
@@ -42,8 +42,8 @@ const UserProvider = ({children}) => {
         if(localStorage.getItem('token')){
           localStorage.removeItem('token');
         }
-        if(localStorage.getItem('userActivo')){
-          localStorage.removeItem('userActivo');
+        if(localStorage.getItem('user')){
+          localStorage.removeItem('user');
         }
       }      
     }

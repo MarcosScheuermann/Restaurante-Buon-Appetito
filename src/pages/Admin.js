@@ -1,6 +1,5 @@
 import { Container } from "react-bootstrap";
 import AdminABM from "../components/Admin/AdminABM";
-import Products from "./Products";
 
 const Admin = () => {
   return (
