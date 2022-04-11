@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from '../src/components/Layout/layout'
 // import ProductsState from "./context/products/ProductsState";
 import UserProvider from "./context/UserContext";
+import CartProvider from './context/CartContext';
 // import Admin from "./pages/Admin";
 // import Home from "./pages/Home";
 // import LandingPage from "./pages/LandingPage";
@@ -29,6 +30,7 @@ function App() {
   return (
     <>
       <Router>
+      <CartProvider>
       <UserProvider>
         {/* <ProductsState> */}
           <Layout>
@@ -55,6 +57,7 @@ function App() {
         </Layout>
         {/* </ProductsState> */}
       </UserProvider>
+      </CartProvider>
     </Router>
     </>
   );

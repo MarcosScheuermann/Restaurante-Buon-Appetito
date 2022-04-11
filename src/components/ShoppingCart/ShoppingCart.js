@@ -1,4 +1,4 @@
-import './CarritoCompra.css'
+import './ShoppingCart.css'
 import { ListGroup } from 'react-bootstrap';
 
 const CarritoCompra = () => {

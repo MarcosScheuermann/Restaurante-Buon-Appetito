@@ -1,10 +1,14 @@
 import {Container, Row, Col} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DetailsProduct from '../components/DetailsProduct/DetailsProduct.js'
+import CartBadge from '../components/CartBadge/CartBadge'
+import styled from 'styled-components';
+
+const BadgeContainer = styled.div `
+
+`
 
 const ProductPage = () => {
-
-    
 
     return (
         <Container className='m-5'>
@@ -16,6 +20,9 @@ const ProductPage = () => {
                     <DetailsProduct></DetailsProduct>
                 </Col>
             </Row>
+            <BadgeContainer>
+                <CartBadge></CartBadge>
+            </BadgeContainer>
         </Container>
     );
 }

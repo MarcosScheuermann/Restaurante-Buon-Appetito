@@ -1,19 +1,11 @@
 import "./DetailsProduct.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Form } from "react-bootstrap";
-import { useState } from 'react';
-import { useLocation, useParams } from 'react-router-dom'
-import useGet from '../../hooks/useGet'
+
 
 const DetailsProduct = () => {
-
-    const params = useParams();
-    const product = useGet('http://localhost:4000/productos/'+params.id)
-    const location = useLocation();
-    const [cart, setCart] = useState([''])
     const handleCart = (e) => {
       e.preventDefault();
-      console.log ('Apretaste el boton')
     }
         
   return (
