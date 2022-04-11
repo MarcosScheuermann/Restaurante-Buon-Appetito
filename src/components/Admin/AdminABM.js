@@ -40,7 +40,7 @@ const AdminABM = () => {
         {products.map((product, index) => (
           <tr>
             <td>
-              <p key={index}>{product.name}</p>
+              <p key={index}>😒{product.id}</p>
             </td>
           </tr>
         ))}
