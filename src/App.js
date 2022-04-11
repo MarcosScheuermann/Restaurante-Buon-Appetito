@@ -48,6 +48,7 @@ function App() {
       <Router>
       <CartProvider>
       <UserProvider>
+      <ProductsProvider>
         {/* <ProductsState> */}
           <Layout>
             <Routes>
@@ -62,10 +63,6 @@ function App() {
               {/* <Route path="/productos" element={<PrivateRoute><Products /></PrivateRoute>} />
               <Route path="/productos/:id" element={<PrivateRoute><ProductDetail /></PrivateRoute>} /> */}
               <Route path="/" element={<Home />} />
-        <UserProvider>
-          <ProductsProvider>
-            <Layout>
-              <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
               <Route path="/login" element={<Login />} />
@@ -74,31 +71,21 @@ function App() {
               <Route path="/contacto" element={<Contacto />} />
               <Route path='/producto' element={<ProductPage/>} />
               <Route path='/carrito' element={<CartPage/>} />
+              <Route path="/AboutUs" element={<AboutUs />} />
+              <Route path="*" element={<LandingPage />} />
+              <Route path="/productos" element={<Products />} />
               {/* <Route path="/nosotros" element={<Nosotros />} />
               <Route path="/productos" element={<Productos />} /> */}
+              {/* <Route path="/productos/:id" element={<ProductDetail />} /> */}
             </Routes>
-        </Layout>
+            </Layout>
+          </ProductsProvider>
         {/* </ProductsState> */}
       </UserProvider>
       </CartProvider>
-    </Router>
-              <Route path="/AboutUs" element={<AboutUs />} />
-
-                <Route path="*" element={<LandingPage />} />
-                
-       
-                <Route path="/productos" element={<Products />} />
-                {/* <Route path="/productos/:id" element={<ProductDetail />} /> */}
-              </Routes>
-            </Layout>
-          </ProductsProvider>
-        </UserProvider>
-      </Router>
+    </Router>    
     </>
   );
 }
 
 export default App;
-
-
-
