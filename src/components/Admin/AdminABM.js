@@ -3,7 +3,6 @@ import ProductsContext from "../../context/ProductsContext";
 import { GET_PRODUCTS, URL_PRODUCTS } from "../../constants";
 import { Button, Container, Table } from "react-bootstrap";
 import axiosClient from "../../config/axiosClient";
-import useGet from "../../hooks/useGet";
 import ProductsProvider from "../../context/ProductsContext";
 
 const AdminABM = () => {

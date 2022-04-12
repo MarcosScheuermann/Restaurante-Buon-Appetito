@@ -6,15 +6,11 @@ import Layout from "./components/Layout/Layout";
 import UserProvider from "./context/UserContext";
 import Login from "./pages/Login";
 import Admin from "./pages/Admin";
-import Contacto from "./pages/Contact";
-import Home from "./pages/Home";
-import Register from "./pages/Register";
-import "./App.css";
+// import Contacto from "./pages/Contact";
+// import Home from "./pages/Home";
+// import Register from "./pages/Register";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Products from "./pages/Products";
-import "./App.css";
-import Login from "./pages/Login";
-import UserProvider from "./context/UserContext";
 import ProductsProvider from "./context/ProductsContext";
 
 function App() {
@@ -25,19 +21,18 @@ function App() {
           <ProductsProvider>
             <Layout>
               <Route path="/" element={<LandingPage />} />
-              <Route path="/home" element={<Home />} />
+              {/* <Route path="/home" element={<Home />} /> */}
               <Route path="/login" element={<Login />} />
-              <Route path="/registro" element={<Register />} />
+              {/* <Route path="/registro" element={<Register />} /> */}
               <Route path="/admin" element={<Admin />} />
-              <Route path="/contacto" element={<Contacto />} />
+              {/* <Route path="/contacto" element={<Contacto />} /> */}
               <Route path="/AboutUs" element={<AboutUs />} />
               <Route path="*" element={<LandingPage />} />
               <Route path="/productos" element={<Products />} />
-              <Route path="/contacto" element={<Contacto />} />
+              {/* <Route path="/contacto" element={<Contacto />} /> */}
               {/* <Route path="/producto" element={<ProductPage />} /> */}
               <Route path="/carrito" element={<CartPage />} />
               <Route path="/AboutUs" element={<AboutUs />} />
-              <Route path="*" element={<LandingPage />} />
             </Layout>
           </ProductsProvider>
         </UserProvider>
