@@ -15,8 +15,14 @@ const navbarLinks = [
   { url: "#", title: "Nosotros" },
 ];
 
+<<<<<<< HEAD
 // const LandingPage = () => {
 //     return ( 
+=======
+
+const LandingPage = () => {
+    return ( 
+>>>>>>> 387afba713fa85bc528636a653fcb95e215cfc06
         
 //         <>
 //          <LandingMain/> 
