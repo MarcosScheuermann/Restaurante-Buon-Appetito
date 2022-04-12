@@ -36,8 +36,8 @@ function App() {
             <Layout>
               <Routes>
               <Route path="/" element={<LandingPage />} />
-              {/* <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} /> */}
-              <Route path="/home" element={<Home />} />
+              <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
+              {/* <Route path="/home" element={<Home />} /> */}
               <Route path="/login" element={<Login />} />
               <Route path="/registro" element={<Register />} />
               <Route path="/admin" element={<Admin />} />
