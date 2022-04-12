@@ -7,9 +7,6 @@ import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
 import Products from "./pages/Products";
 import "./App.css";
-// import PrivateRoute from "./routes/PrivateRoute";
-// import AdminRoute from "./routes/AdminRoute";
-// import PublicRoute from "./routes/PublicRoute";
 import Login from "./pages/Login";
 import UserProvider from "./context/UserContext";
 import ProductsProvider from "./context/ProductsContext";
@@ -30,7 +27,6 @@ function App() {
                 <Route path="/home" element={<Home />} />
                 <Route path="/contacto" element={<Contacto />} />
                 <Route path="/productos" element={<Products />} />
-                {/* <Route path="/productos/:id" element={<ProductDetail />} /> */}
               </Routes>
             </Layout>
           </ProductsProvider>

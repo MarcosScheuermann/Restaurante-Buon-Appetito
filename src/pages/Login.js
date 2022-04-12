@@ -11,7 +11,7 @@ align-items:center;
 const Login = () => {
   return (
     <FormContainer>
-      <LoginForm/>
+         <LoginForm/>
     </FormContainer> 
     );
 }
