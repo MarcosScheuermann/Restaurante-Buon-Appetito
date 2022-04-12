@@ -16,7 +16,7 @@ import Home from "./pages/Home";
 //import Productos from "./pages/Products";
 
 // import ProductDetail from "./pages/ProductDetail";
-import Products from "./pages/Products";
+import Products from "./pages/Products";  //Fer//
 import React from 'react'; //Fer//
 
 
@@ -24,6 +24,7 @@ import React from 'react'; //Fer//
 // import AdminRoute from "./routes/AdminRoute";
 //import PrivateRoute from "./routes/PrivateRoute";
 //import PublicRoute from "./routes/PublicRoute";
+//import ContactForm from "./pages/ContactForm";    Fer
 import './App.css';
 
 
@@ -43,7 +44,8 @@ function App() {
                <Route path="/login" element={<Login />} />
                <Route path="/admin" element={<Admin />} />
                <Route path="/contacto" element={<Contacto />} />
-               <Route path="/productos" element={<Products />} />  
+               <Route path="/productos" element={<Products />} />  {/*Fer*/}
+               {/*<Route path= "/formulario" element={<ContactForm/>} />*/} {/*Fer*/}
                
 
 

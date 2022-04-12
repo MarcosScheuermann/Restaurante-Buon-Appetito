@@ -2,11 +2,12 @@ import { Card, Button } from "react-bootstrap";
 import './ProductCard.css';
 
 
+
 const ProductCard = ({id,title,description,image}) => {
   return (
-    <Card style={{ width: "18rem" }}>
-      <card.id>{id}</card.id>
-      <Card.Img variant="top" src={image} />
+    
+    <Card id={id} text= "center" border="success" style={{ width: "18rem" }}>
+      <Card.Img variant="top" className="card-top" src={image} />
        <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>
@@ -15,6 +16,7 @@ const ProductCard = ({id,title,description,image}) => {
         <Button variant="btn btn-outline-secondary">La Quiero</Button>
       </Card.Body>
     </Card>
+  
   );
 };
 

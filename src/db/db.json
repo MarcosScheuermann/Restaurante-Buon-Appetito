@@ -4,20 +4,20 @@
             "email": "marcos@gmail.com",
             "password": "AA123SS"
         }
-    ]
-},
+    ],
 
 
 
 
-"Productos":[
+
+"products":[
     
     {
         "id":1,
         "name":"Margherita",
         "description":"Tradicional pizza itaiana, jaoielahjfhangajjga ajkjfia  jajfil",
         "button":"La Quiero",
-        "image":"assets/cardspizza.jpg",
+        "image":"./../../assets/cardspizza.jpg"
 
     },
     {
@@ -25,7 +25,7 @@
         "name":"Prosciuto",
         "description":"Tradicional pizza itaiana, jaoielahjfhangajjga ajkjfia  jajfil",
         "button":"La Quiero",
-        "image":"assets/cardspizza.jpg",
+        "image":"assets/cardspizza.jpg"
 
     },
     {
@@ -33,7 +33,7 @@
         "name":"Quattro Stagioni",
         "description":"Tradicional pizza itaiana, jaoielahjfhangajjga ajkjfia  jajfil",
         "button":"La Quiero",
-        "image":"assets/cardspizza.jpg",
+        "image":"assets/cardspizza.jpg"
 
     },
     {
@@ -41,7 +41,7 @@
         "name":"Ravioli",
         "description":"Tradicionales ravioles italiana, jaoielahjfhangajjga ajkjfia  jajfil",
         "button":"La Quiero",
-        "image":"assets/cardspasta.jpg",
+        "image":"assets/cardspasta.jpg"
 
     },
     {
@@ -49,7 +49,7 @@
         "name":"Gnocchi",
         "description":"Tradicionales ñoquis italiana, jaoielahjfhangajjga ajkjfia  jajfil",
         "button":"La Quiero",
-        "image":"assets/cardspasta.jpg",
+        "image":"assets/cardspasta.jpg"
 
     },
     {
@@ -57,14 +57,14 @@
         "name":"Tagiatele",
         "description":"Tradicionales fideo italiana, jaoielahjfhangajjga ajkjfia  jajfil",
         "button":"La Quiero",
-        "image":"assets/cardspasta.jpg",
+        "image":"assets/cardspasta.jpg"
     },
     {
         "id":7,
         "name":"Bolognese",
         "description":"Tradicional salsa boloniesa italiana, jaoielahjfhangajjga ajkjfia  jajfil",
         "button":"La Quiero",
-        "image":"assets/cardssalsa.jpg",
+        "image":"assets/cardssalsa.jpg"
         
 
     },
@@ -73,15 +73,16 @@
         "name":"Bianca",
         "description":"Tradicional salsa Blanca italiana, jaoielahjfhangajjga ajkjfia  jajfil",
         "button":"La Quiero",
-        "image":"assets/cardssalsa.jpg",
+        "image":"assets/cardssalsa.jpg"
 
     },
     {
         "id":9,
         "name":"Vongole",
-        "description":"Tradicional salsa con almejas italiana, jaoielahjfhangajjga ajkjfia  jajfil",
+        "description":"Tradicional salsa con almejas italiana, jaoielahjfhangajjg  jajfil",
         "button":"La Quiero",
-        "image":"assets/cardssalsa.jpg",
+        "image":"assets/cardssalsa.jpg"
 
-    },
+    }
 ]
+}
