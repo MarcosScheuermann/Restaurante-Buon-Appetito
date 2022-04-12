@@ -6,7 +6,6 @@ import UserProvider from "./context/UserContext";
 import Login from "./pages/Login";
 import Admin from "./pages/Admin";
 import Contacto from "./pages/Contact";
-import LandingPage from "./pages/LandingPage";
 import Home from "./pages/Home";
 import PrivateRoute from "./routes/PrivateRoute";
 //import Nosotros from "./pages/AboutUs";
@@ -25,8 +24,6 @@ import "./App.css";
 // import PrivateRoute from "./routes/PrivateRoute";
 // import AdminRoute from "./routes/AdminRoute";
 // import PublicRoute from "./routes/PublicRoute";
-import Login from "./pages/Login";
-import UserProvider from "./context/UserContext";
 import ProductsProvider from "./context/ProductsContext";
 import AdminABM from "./components/Admin/AdminABM";
 
@@ -40,6 +37,7 @@ function App() {
               <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
+              {/* <Route path="/home" element={<Home />} /> */}
               <Route path="/login" element={<Login />} />
               <Route path="/registro" element={<Register />} />
               <Route path="/admin" element={<Admin />} />
