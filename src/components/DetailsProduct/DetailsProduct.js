@@ -1,15 +1,15 @@
 import "./DetailsProduct.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Form } from "react-bootstrap";
+// import useGet from '../../hooks/useGet'
 import { useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom'
-import useGet from '../../hooks/useGet'
 import { URL_PRODUCTS } from "../../constants";
 
-const DetailsProduct = () => {
+export const DetailsProduct = () => {
 
+    // const product = useGet(URL_PRODUCTS + params.id)
     const params = useParams();
-    const product = useGet(URL_PRODUCTS + params.id)
     const location = useLocation();
     const [cart, setCart] = useState([''])
     const handleCart = (e) => {
