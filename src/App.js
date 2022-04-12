@@ -9,10 +9,12 @@ import Admin from "./pages/Admin";
 import Contacto from "./pages/Contact";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
-import './App.css';
+import "./App.css";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Products from "./pages/Products";
 import "./App.css";
+import Login from "./pages/Login";
+import UserProvider from "./context/UserContext";
 import ProductsProvider from "./context/ProductsContext";
 
 function App() {
@@ -29,24 +31,19 @@ function App() {
               <Route path="/admin" element={<Admin />} />
               <Route path="/contacto" element={<Contacto />} />
               <Route path="/AboutUs" element={<AboutUs />} />
-              <Route path="*" element={<LandingPage />} />       
+              <Route path="*" element={<LandingPage />} />
               <Route path="/productos" element={<Products />} />
               <Route path="/contacto" element={<Contacto />} />
-              <Route path='/producto' element={<ProductPage/>} />
-              <Route path='/carrito' element={<CartPage/>} />
+              {/* <Route path="/producto" element={<ProductPage />} /> */}
+              <Route path="/carrito" element={<CartPage />} />
               <Route path="/AboutUs" element={<AboutUs />} />
-              <Route path="*" element={<LandingPage />} />       
-              <Route path="/productos" element={<Products />} />
+              <Route path="*" element={<LandingPage />} />
             </Layout>
-          </ProductsProvider>              
+          </ProductsProvider>
         </UserProvider>
       </Router>
-
     </>
   );
 }
 
 export default App;
-
-
-
