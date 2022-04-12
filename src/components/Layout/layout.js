@@ -1,5 +1,6 @@
-import Header from "../Header/Header";
+
 import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
 const Layout = ({children}) => {
     return ( 
@@ -9,6 +10,6 @@ const Layout = ({children}) => {
         <Footer/>
         </>
      );
-    };
+}
 
 export default Layout;

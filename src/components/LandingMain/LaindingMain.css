@@ -1,0 +1,13 @@
+.carousel-image{
+    max-height: 60vh;
+    max-width: 100vw;
+    object-fit: cover;
+    object-position: top;
+    
+}
+/*.carousel-img{
+    max-height: 50vh;
+    object-fit: cover;
+    object-position: top;
+    margin-top: 5px;
+}*/
