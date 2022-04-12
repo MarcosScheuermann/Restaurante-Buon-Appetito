@@ -1,7 +1,7 @@
 import { Container, figure, carrousel, img} from "react-bootstrap";
 import "./AboutUs.css" 
 
-const AboutUs = () => {
+export const AboutUs = () => {
     return (
         <Container>
         <h2>Diseñadores de Buon Appetito</h2>

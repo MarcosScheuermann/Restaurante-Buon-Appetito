@@ -12,6 +12,7 @@ const UserProvider = ({children}) => {
         const {data} = await axiosClient.post('/users/login',values);
         setToken(data.token);
         setAuth(true);
+
         localStorage.setItem('token', data.token);
         } catch (error) {
         console.log(error);
@@ -34,6 +35,7 @@ const UserProvider = ({children}) => {
         setAuth(true);
         setUser(response.data.user); 
         localStorage.setItem('user', response.data.user.name);
+        console.log(response.data.user.name); 
       } catch (error) {
         console.log(error);
         setAuth(false);
@@ -53,7 +55,7 @@ const UserProvider = ({children}) => {
       setToken(null);
       setUser(null);
       localStorage.removeItem('token');
-      localStorage.removeItem('userActivo');
+      localStorage.removeItem('user');
     }
 
     return (

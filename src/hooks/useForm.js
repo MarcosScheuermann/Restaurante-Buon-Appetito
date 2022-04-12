@@ -18,19 +18,7 @@ const useForm = (initialValues, submit, validations) => {
       [e.target.name]: e.target.value
     })
   }
-  // const handleSubmit = (e) =>{
-  //   e.preventDefault();
-  //   if(validations){
-  //     setErrors(validations(values));
-  //     setSubmitting(true);
-  //     // errors = validations(values);
-  //     if(Object.keys(errors).length===0){
-  //       submit();
-  //     }
-  //   }else{
-  //     submit();
-  //   }
-  // }
+
   const handleSubmit = (e) =>{
     e.preventDefault();
     setErrors(validations(values));
