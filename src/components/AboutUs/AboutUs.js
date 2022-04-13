@@ -1,6 +1,10 @@
 import "./AboutUs.css";
 import { Container} from "react-bootstrap";
 import LucasImg from "./../../assets/Integrantes/Lucas Ferruchi.jpeg"
+import GastonImg from "./../../assets/Integrantes/Gastón Devalis.jpg"
+import JuanImg from "./../../assets/Integrantes/Juan Ernesto Villegas.jpg"
+import FerImg from "./../../assets/Integrantes/Maria Fernanda Trujillo.jpg"
+import MarcosImg from "./../../assets/Integrantes/Marcos Scheuermann.jpeg"
 
 
 const AboutUs = () => {
@@ -19,7 +23,7 @@ const AboutUs = () => {
                         </p>
                     </div>
                 </figure>
-                <figure><img src="./../assets/Integrantes/Marcos Scheuermann.jpeg"/>
+                <figure><img src={MarcosImg}/>
                     <div className="image__overlay image__overlay--primary">
                         <div className="image__title">Scheuermann, Marcos</div>
                         <p className="image__description">
@@ -28,7 +32,7 @@ const AboutUs = () => {
                         </p>
                     </div>
                 </figure>
-                <figure><img src="./../assets/Integrantes/Maria Fernanda Trujillo.jpg"/>
+                <figure><img src={FerImg}/>
                     <div className="image__overlay image__overlay--primary">
                         <div className="image__title">Trujillo, M. Fernanda</div>
                         <p className="image__description">
@@ -38,7 +42,7 @@ const AboutUs = () => {
                     </div>                
                 </figure>
                 
-                <figure><img src="./../assets/Integrantes/Juan Ernesto Villegas.jpg"/>
+                <figure><img src={JuanImg}/>
                 <div className="image__overlay image__overlay--primary">
                     <div className="image__title">Villegas, Juan Ernesto</div>
                     <p className="image__description">
@@ -47,7 +51,7 @@ const AboutUs = () => {
                     </p>
                 </div>
                 </figure>   
-                <figure><img src="./../assets/Integrantes/Gastón Devails.jpg"/>
+                <figure><img src={GastonImg}/>
                     <div className="image__overlay image__overlay--primary">
                         <div className="image__title">Devails, Gastón</div>
                         <p className="image__description">
