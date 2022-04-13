@@ -1,9 +1,11 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import App from './App';
-//import 'bootstrap/dist/css/bootstrap.css';
+// import {createRoot} from 'react-dom/client'
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,3 +14,8 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+// createRoot(
+//   document.getElementById('root')
+// ).render(
+//   <App />
+// )

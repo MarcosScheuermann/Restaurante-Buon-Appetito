@@ -2,8 +2,15 @@ import React, {useState} from "react";
 import "./Navbar.css";
 import {HiMenuAlt2 } from "react-icons/hi";
 import {RiCloseFill } from "react-icons/ri";
+import {Link, useLocation} from "react-router-dom";
 
-const Navbar = ({ navbarLinks }) => {
+
+
+
+const Navbar = () => {
+
+  const location = useLocation()
+  console.log(location)
 
   const [menuClick, setMenuclick] = useState(false);
 
@@ -11,7 +18,11 @@ const Navbar = ({ navbarLinks }) => {
     setMenuclick(!menuClick);
   };
 
+  
+  
+
   return (
+
     <nav className="navbar">
         <span className="navbar_logo">Buon Appetito</span>
 
@@ -22,13 +33,32 @@ const Navbar = ({ navbarLinks }) => {
         )}
 
       <ul className={menuClick ? "navbar_list" : "navbar_list navbar_list--active"}>
-        {navbarLinks.map((item) => {
-          return (
-            <li className="navbar_item" key={item.title}>
-              <a className="navbar_link" href={item.url}>{item.title}</a>
+        
+            {location.pathname=="/Login"?
+            <>
+            <li className="navbar_item" >
+              <Link className="navbar_link" to="/AboutUs">Nosotros</Link>
             </li>
-          );
-        })}
+            <li className="navbar_item" >
+              <Link className="navbar_link" to="#">Contacto</Link>
+            </li>
+            </>
+            :
+            <>
+            <li className="navbar_item" >
+              <Link className="navbar_link" to="/Login">Ingresar</Link>
+            </li>
+            <li className="navbar_item" >
+              <Link className="navbar_link" to="/AboutUs">Nosotros</Link>
+            </li>
+            <li className="navbar_item" >
+              <Link className="navbar_link" to="#">Contacto</Link>
+            </li>
+            </>
+            }
+           
+          
+       
       </ul>
     </nav>
   );
