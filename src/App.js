@@ -36,6 +36,7 @@ import "./App.css";
 // import PublicRoute from "./routes/PublicRoute";
 import ProductsProvider from "./context/ProductsContext";
 import AdminABM from "./components/Admin/AdminABM";
+import ShoppingCart from './components/ShoppingCart/ShoppingCart'
 
 function App() {
   return (
@@ -69,18 +70,17 @@ function App() {
               <Route path="/AboutUs" element={<AboutUs />} />
               <Route path="*" element={<LandingPage />} />
               <Route path="/productos" element={<Products />} />
+              <Route path="/carrito" element={<ShoppingCart />} />
               {/* <Route path="/nosotros" element={<Nosotros />} />
               <Route path="/productos" element={<Productos />} /> */}
               {/* <Route path="/productos/:id" element={<ProductDetail />} /> */}
             </Routes>
             </Layout>
-          </ProductsProvider>
         {/* </ProductsState> */}
+        </ProductsProvider>
       </UserProvider>
       </CartProvider>
-    </Router>    
+    </Router>
     </>
-  );
-}
-
+    )}
 export default App;

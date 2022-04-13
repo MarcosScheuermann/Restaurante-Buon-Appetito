@@ -12,7 +12,7 @@ const DetailsProduct = () => {
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Text className="text-danger">
-          <h2>$20</h2>
+          <h2>$20</h2> 
         </Form.Text>
         <Form.Text className="text-dark">
           <h3>Nombre del producto</h3>
