@@ -20,8 +20,14 @@ const LoginForm = () =>{
   useEffect(()=>{
     if(auth){      
       const userActivo = JSON.parse(localStorage.getItem('user'));
+      try {
+        const userActivo = JSON.parse(localStorage.getItem('user'));
+       }
+       catch (error) {
+        console.log('Error parsing JSON:', error, userActivo);
+       }
       sweetalert2('Bienvenido!', userActivo);
-      navigate('/ContactForm');      
+      navigate('/admin');      
     }
   },[auth])
   
@@ -36,7 +42,7 @@ const LoginForm = () =>{
         Swal.showLoading()
         const b = Swal.getHtmlContainer().querySelector('b')
         timerInterval = setInterval(() => {
-          b.textContent = Swal.getTimerLeft()
+          // b.textContent = Swal.getTimerLeft()
         }, 100)
       },
       willClose: () => {
