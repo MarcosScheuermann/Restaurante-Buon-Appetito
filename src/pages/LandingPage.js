@@ -9,9 +9,9 @@ import Slider from "../components/Slider/Slider";
 import Navbar from "../components/Header/Navbar";
 
 const navbarLinks = [
-  { url: "#", title: "Ingresar" },
-  { url: "#", title: "Contacto" },
-  { url: "#", title: "Nosotros" },
+  { url: "/Login", title: "Ingresar" },
+  { url: "/ContactForm", title: "Contacto" },
+  { url: "/AboutUs", title: "Nosotros" },
 ];
 
     
