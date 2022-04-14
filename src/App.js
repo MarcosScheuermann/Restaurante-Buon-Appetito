@@ -24,7 +24,7 @@ import React from 'react'; //Fer//
 import AboutUs from "./components/AboutUs/AboutUs";  
 // import ProductDetail from "./pages/ProductDetail";
 // import "./App.css";
-// import PrivateRoute from "./routes/PrivateRoute";
+import PrivateRoute from "./routes/PrivateRoute";
 // import AdminRoute from "./routes/AdminRoute";
 // import PublicRoute from "./routes/PublicRoute";
 import ProductsProvider from "./context/ProductsContext";
@@ -38,43 +38,43 @@ function App() {
           <ProductsProvider>
             <Layout>
               <Routes>
-              <Route path="/" element={<LandingPage />} />
-              {/* <Route path="/home" element={<Home />} /> */}
-              {/* <Route path="/home" element={<Home />} /> */}
-              <Route path="/login" element={<Login />} />
-              {/* <Route path="/registro" element={<Register />} /> */}
-              <Route path="/admin" element={<Admin />} />
-              {/* <Route path="/contacto" element={<Contacto />} /> */}
-              <Route path='/producto' element={<ProductPage/>} />
-              <Route path='/carrito' element={<CartPage/>} />
-              {/* <Route path="/nosotros" element={<Nosotros />} />
+                <Route path="/" element={<LandingPage />} />
+                {/* <Route path="/home" element={<Home />} /> */}
+                {/* <Route path="/home" element={<Home />} /> */}
+                <Route path="/login" element={<Login />} />
+                {/* <Route path="/registro" element={<Register />} /> */}
+                <Route
+                  path="/admin"
+                  element={
+                    <PrivateRoute>
+                      <Admin />
+                    </PrivateRoute>
+                  }
+                />
+                {/* <Route path="/contacto" element={<Contacto />} /> */}
+                <Route path="/producto" element={<ProductPage />} />
+                <Route path="/carrito" element={<CartPage />} />
+                {/* <Route path="/nosotros" element={<Nosotros />} />
               <Route path="/productos" element={<Productos />} /> */}
-              <Route path="/AboutUs" element={<AboutUs />} />       
+                <Route path="/AboutUs" element={<AboutUs />} />
 
-               {/*<Route path="/productos" element={<Productos} />} */}
+                {/*<Route path="/productos" element={<Productos} />} */}
 
+                {/*<Route path="/productos/:id" element={<PrivateRoute><ProductDetail /></PrivateRoute>} /> */}
 
+                {/* -- */}
+                {/* <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} /> */}
+                {/* <Route path="/registro" element={<PublicRoute><Register /></PublicRoute>} /> */}
+                {/* -- */}
+                {/* <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} /> */}
+                {/* <Route path="/admin" element={<AdminRoute><Admin /></AdminRoute>} /> */}
 
-
-               {/*<Route path="/productos/:id" element={<PrivateRoute><ProductDetail /></PrivateRoute>} /> */}
-             
-              {/* -- */}
-              {/* <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} /> */}
-              {/* <Route path="/registro" element={<PublicRoute><Register /></PublicRoute>} /> */}
-               {/* -- */}
-              {/* <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} /> */}
-              {/* <Route path="/admin" element={<AdminRoute><Admin /></AdminRoute>} /> */}
-             
-             
-        
-              
-              {/* <Route path="/nosotros" element={<Nosotros />} />*/}
-              
-            </Routes>
-        </Layout>
-        </ProductsProvider>
-      </UserProvider>
-    </Router>
+                {/* <Route path="/nosotros" element={<Nosotros />} />*/}
+              </Routes>
+            </Layout>
+          </ProductsProvider>
+        </UserProvider>
+      </Router>
     </>
   );
 }
