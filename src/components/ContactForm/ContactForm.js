@@ -30,3 +30,5 @@ import "./ContactForm.css";
     Submit
   </Button>
 </Form>;
+
+export default ContactForm;
