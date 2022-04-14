@@ -21,7 +21,7 @@ import React from 'react'; //Fer//
 //import PublicRoute from "./routes/PublicRoute";
 //import ContactForm from "./pages/ContactForm";    Fer
 // import './App.css';
-import AboutUs from "./components/AboutUs/AboutUs";
+import AboutUs from "./components/AboutUs/AboutUs";  
 // import ProductDetail from "./pages/ProductDetail";
 // import "./App.css";
 // import PrivateRoute from "./routes/PrivateRoute";
@@ -49,7 +49,7 @@ function App() {
               <Route path='/carrito' element={<CartPage/>} />
               {/* <Route path="/nosotros" element={<Nosotros />} />
               <Route path="/productos" element={<Productos />} /> */}
-              <Route path="/AboutUs" element={<AboutUs />} />
+              <Route path="/AboutUs" element={<AboutUs />} />       
 
                {/*<Route path="/productos" element={<Productos} />} */}
 
