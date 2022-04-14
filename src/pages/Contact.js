@@ -1,4 +1,34 @@
-import { Container } from "react-bootstrap";
+//Formulario de contacto Fer//
+
+import ContactForm from "../components/ContactForm/ContactForm";
+import { FormContainer } from "./Login"; //Que corresponde aquí?//
+
+const Contact = () => {
+  return ( 
+    <FormContainer>
+      <ContactForm/>
+    </FormContainer>
+   );
+}
+ 
+export default Contact;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import { Container } from "react-bootstrap";
 
 const Contacto = () => {
     return ( 
@@ -8,4 +38,4 @@ const Contacto = () => {
      );
 }
  
-export default Contacto;
+export default Contacto;*/
