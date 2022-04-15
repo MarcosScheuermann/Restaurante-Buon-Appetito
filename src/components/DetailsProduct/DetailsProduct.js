@@ -1,18 +1,28 @@
 import "./DetailsProduct.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Form } from "react-bootstrap";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import useGet from "../../hooks/useGet";
+import { URL_PRODUCTS } from "../../constants";
 
 
 const DetailsProduct = () => {
+  const [setCart] = useContext(CartContext);
+  const products = useGet(URL_PRODUCTS);
+
     const handleCart = (e) => {
       e.preventDefault();
+      const data = products.map ({id: products.id, name: products.name, price: products.price});
+      setCart (data);
+      console.log (setCart);
     }
         
   return (
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Text className="text-danger">
-          <h2>$20</h2> 
+          <h2>{products.id}</h2>  
         </Form.Text>
         <Form.Text className="text-dark">
           <h3>Nombre del producto</h3>

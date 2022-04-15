@@ -1,7 +1,5 @@
 import Badge from 'react-bootstrap/Badge'
 import Button from 'react-bootstrap/Button'
-import { useContext } from 'react';
-import CartContext from '../../context/CartContext'
 
 const CartBadge = () => {
 
