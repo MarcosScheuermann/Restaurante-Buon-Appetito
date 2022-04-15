@@ -20,7 +20,7 @@ function App() {
             <Layout>
               <Routes>
                 <Route path="/" element={<LandingPage />} />
-                <Route path="/login" element={<Login />} />
+                <Route path="/login" element={<Login /> }/>
                 <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
                 <Route path="/producto" element={<ProductPage />} />
                 <Route path="/carrito" element={<CartPage />} />
