@@ -50,9 +50,6 @@ const AdminABM = () => {
           </tbody>
         </Table>
         <AddModal show={show} handleClose={handleClose} setProducts = {setProducts} products={products} />
-        {products.map((product, index) => (
-          <p key={index}>{product.name}</p>
-        ))}
       </Container>
     </>
   );
