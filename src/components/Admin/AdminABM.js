@@ -41,7 +41,7 @@ const AdminABM = () => {
           </thead>
           <tbody>
             {products.map((product) => (
-              <tr>
+              <tr key={product._id}>
                 <td>{product._id}</td>
                 <td>{product.name}</td>
                 <td>{product.abbreviation}</td>
