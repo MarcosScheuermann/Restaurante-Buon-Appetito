@@ -27,7 +27,7 @@ const AdminABM = () => {
       <p>SOY ADMINISTRADOR MARCOS</p>
 
       <Container className="right-block">
-        <Button variant="dark" onClick={handleShow}>
+        <Button variant="dark" onClick={handleShow} className="m-3" >
           Agregar Productos
         </Button>
 

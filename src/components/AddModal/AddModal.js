@@ -23,12 +23,12 @@ const AddModal = ({show, handleClose, setProducts, products }) => {
             <FloatingLabel
               controlId="floatingInput"
               label="Nombre del Producto"
-              className="mb-3 w-100"
+              className="mb-3"
             >
               <Form.Control
                 type="text"
                 placeholder="Prod"
-                className="login-input w-100"
+                className=""
                 onKeyUp={handleKeyUp}
                 name="name"
               />
@@ -37,7 +37,7 @@ const AddModal = ({show, handleClose, setProducts, products }) => {
               <Form.Control
                 type="text"
                 placeholder="productito"
-                className="login-input"
+                className=""
                 onKeyUp={handleKeyUp}
                 name="abbreviation"
               />
