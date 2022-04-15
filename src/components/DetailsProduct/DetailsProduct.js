@@ -4,19 +4,17 @@ import { Button, Form } from "react-bootstrap";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import useGet from "../../hooks/useGet";
-import { URL_PRODUCTS } from "../../constants";
+import { URL_PRODUCTS } from "../../constants/index";
 
 
 const DetailsProduct = () => {
-  const [setCart] = useContext(CartContext);
+  const [cart, setCart] = useContext(CartContext);
   const products = useGet(URL_PRODUCTS);
 
     const handleCart = (e) => {
-      e.preventDefault();
-      const data = products.map ({id: products.id, name: products.name, price: products.price});
-      setCart (data);
-      console.log (setCart);
-    }
+        e.preventDefault();
+        
+      }
         
   return (
     <Form>
@@ -47,14 +45,3 @@ const DetailsProduct = () => {
 };
 
 export default DetailsProduct;
-
-/* 
-        <>
-        <div className='infoProduct mt-50'>
-            <h2 className='text-danger'>$20</h2>
-            <p>Descripcion del producto</p>
-            <Button variant="success" className='w-25'>Agregar al Carrito</Button>{' '}
-            <Button variant="primary" className='w-25'>Volver</Button>{' '}
-        </div>
-        </>
-*/

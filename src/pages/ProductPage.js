@@ -2,13 +2,8 @@ import {Container, Row, Col} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DetailsProduct from '../components/DetailsProduct/DetailsProduct.js'
 import CartBadge from '../components/CartBadge/CartBadge'
-import styled from 'styled-components';
-import useGet from '../hooks/useGet.js';
+import useGet from '../hooks/useGet';
 import { URL_PRODUCTS } from '../constants/index.js';
-
-const BadgeContainer = styled.div `
-
-`
 
 const ProductPage = () => {
     const products = useGet(URL_PRODUCTS);
@@ -27,9 +22,7 @@ const ProductPage = () => {
                     ></DetailsProduct>
                 </Col>
             </Row>
-            <BadgeContainer>
                 <CartBadge></CartBadge>
-            </BadgeContainer>
         </Container>
     );
 }

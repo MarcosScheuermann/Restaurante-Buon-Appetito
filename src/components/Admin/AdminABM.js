@@ -3,7 +3,7 @@ import ProductsContext from "../../context/ProductsContext";
 import { GET_PRODUCTS, URL_PRODUCTS } from "../../constants";
 import { Button, Container, Table } from "react-bootstrap";
 import axiosClient from "../../config/axiosClient";
-import useGet from "../../hooks/useGet";
+// import useGet from "../../hooks/useGet";
 import ProductsProvider from "../../context/ProductsContext";
 
 const AdminABM = () => {
@@ -40,7 +40,7 @@ const AdminABM = () => {
         {products.map((product, index) => (
           <tr>
             <td>
-              <p key={index}>{product.name}</p>
+              <p key={index}>😭{product.id}</p>
             </td>
           </tr>
         ))}

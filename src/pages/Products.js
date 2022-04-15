@@ -1,30 +1,43 @@
-
-import { Row, Col, Container } from "react-bootstrap";
-import useGet from "../hooks/useGet";
-import ProductCard from "../components/ProductCard/ProductCard";
+import axios from "axios";
+import {useEffect, useState} from "react";
+import ProductCard from "../components/ProductCard/ProductCard"; 
+import {Row, Col } from 'react-bootstrap';
+import { Container } from "react-bootstrap";
 import { URL_PRODUCTS } from "../constants";
 
-export const Products = () => {
-  
-  const products = useGet(URL_PRODUCTS);
-  
-  return (
-    <Container className="mt-5">
-      <Row xs={1} md={3} className="g-4">
-        <p>Lista de Productos</p>
+
+const Products = () => {
+ const[products,setProducts] = useState([]);
+    useEffect(()=>{
+        const getProducts = async()=>{
+          try{
+            const response = await axios.get('http://localhost:4000/products');
+            const {data} = response;
+             setProducts(data);
+          }catch (error){
+              console.warn(error);
+          }
+        }
+        getProducts();
+    },[])
+    return (
+      <Container className="mt-5">        
+        <Row xs={1} md={3} className="g-2">
         {products.map((product) => (
-          <Col key={product.id}>
+          <Col>
             <ProductCard
-              id={product.id}
-              title={product.name}
-              image={product.image}
-              price={product.price}
+            className="m-3"
+            id={product.id}
+            title={product.name}
+            description={product.description}
+            image={product.image}
             />
           </Col>
         ))}
       </Row>
-    </Container>
-  );
-};
-
+      </Container>
+     );
+}
+ 
 export default Products;
+

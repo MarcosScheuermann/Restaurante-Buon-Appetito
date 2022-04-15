@@ -1,72 +1,24 @@
-import React, { useState } from "react";
+
+import React from "react";
 import "./Header.css";
-import { Navbar, Container, Nav } from "react-bootstrap";
-import { useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 
 const Header = () => {
-  const [user, setUser] = useState (null);
-
-    useEffect(() => {
-      const userLogged = JSON.parse(localStorage.getItem("user"));
-      if (userLogged) {
-        setUser(userLogged);
-      } else {
-      }
-    }, []);
-
-    const handleClick = () => {
-      localStorage.clear();
-      setUser(null);
-    };
-
   return (
     <Navbar collapseOnSelect expand="lg" variant="dark" className="header">
       <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          {user ? (
-            user.role === "ADMIN" ? (
-              <>
-                <Nav className="me-auto">
-                  <Link to="/productos" className="nav-link">
-                    Productos
-                  </Link>
-                  <Link to="/admin" className="nav-link">
-                    Administración
-                  </Link>
-                </Nav>
-                <Nav className="ms-auto">
-                  <Link to="/" onClick={handleClick} className="nav-link">
-                    Cerrar sesión
-                  </Link>
-                </Nav>
-              </>
-            ) : (
-              <>
-                <Nav className="me-auto">
-                  <Link to="/productos" className="nav-link">
-                    Productos
-                  </Link>
-                </Nav>
-                <Nav className="ms-auto">
-                  <Link to="/" onClick={handleClick} className="nav-link">
-                    Cerrar sesión
-                  </Link>
-                </Nav>
-              </>
-            )
-          ) : (
-            <Nav className="ms-auto">
-              <Link to="/login" className="nav-link">
-                Iniciar sesión
-              </Link>
-              <Link className="nav-link" to="/registro">
-                Registrarse
-              </Link>
-            </Nav>
-          )}
-
+          <Nav className="me-auto">
+            <Nav.Link href="/LandinPage">Página principal</Nav.Link>
+            <Nav.Link href="/Login">Login</Nav.Link>
+            <NavDropdown title="Mas" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="/productos">Menú</NavDropdown.Item> {/*Fer*/}
+              <NavDropdown.Item href="#">Promociones</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="/#">Contacto</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
           <Navbar.Brand href="/">
             <img
               alt=""
@@ -76,6 +28,9 @@ const Header = () => {
               className="d-inline-block align-top"
             />
           </Navbar.Brand>
+          <Nav>
+            <Nav.Link href="/Admin">Administrador</Nav.Link>
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
@@ -157,43 +112,5 @@ const Header = () => {
 
 //HEADER LUCAS
 
-// import React from "react";
-// import "./Header.css";
-// import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-
-// const Header = () => {
-//   return (
-//     <Navbar collapseOnSelect expand="lg" variant="dark" className="header">
-//       <Container>
-//         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-//         <Navbar.Collapse id="responsive-navbar-nav">
-//           <Nav className="me-auto">
-//             <Nav.Link href="/">Página principal</Nav.Link>
-//             <Nav.Link href="/Login">Login</Nav.Link>
-//             <NavDropdown title="Mas" id="collasible-nav-dropdown">
-//               <NavDropdown.Item href="/Productos">Menú</NavDropdown.Item>
-//               <NavDropdown.Item href="#">Promociones</NavDropdown.Item>
-//               <NavDropdown.Divider />
-//               <NavDropdown.Item href="/#">Contacto</NavDropdown.Item>
-//               <NavDropdown.Item href="/AboutUs">Nosotros</NavDropdown.Item>
-//             </NavDropdown>
-//           </Nav>
-//           <Navbar.Brand href="/">
-//             <img
-//               alt=""
-//               src="/img/Logo_Buon_Appetito.png"
-//               width="100"
-//               height="100"
-//               className="d-inline-block align-top"
-//             />
-//           </Navbar.Brand>
-//           <Nav>
-//             <Nav.Link href="/Admin">Administrador</Nav.Link>
-//           </Nav>
-//         </Navbar.Collapse>
-//       </Container>
-//     </Navbar>
-//   );
-// };
 
 export default Header;
