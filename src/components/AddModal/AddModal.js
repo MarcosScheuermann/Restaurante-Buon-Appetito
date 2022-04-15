@@ -1,13 +1,13 @@
-import {Modal, Button} from "react-bootstrap";
+import {Modal, Button, FloatingLabel, Form,} from "react-bootstrap";
 import axiosClient from "../../config/axiosClient";
 import { ADD_PRODUCT_VALUES } from "../../constants";
 import useForm from "../../hooks/useForm";
 
-const AddModal = ({show, handleClose, setProducts }) => {
+const AddModal = ({show, handleClose, setProducts, products }) => {
     const addProduct = async (info) => {
         try {
             const response = await axiosClient.post ("/products", info)
-            setProducts(...products)
+            setProducts(...products, response.data.productadd)
         } catch (error) {
             console.log(error);
         }
