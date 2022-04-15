@@ -1,6 +1,6 @@
-import { axios } from "axios";
 import { useEffect, useState } from "react";
 import { Container, Table, Button } from "react-bootstrap";
+import axiosClient from "../../config/axiosClient";
 import AddModal from "../AddModal/AddModal";
 
 const AdminABM = () => {
@@ -12,7 +12,7 @@ const AdminABM = () => {
 
   const getProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:3500/products");
+      const response = await axiosClient.get("/products");
       setProducts(response.data.products);
     } catch (error) {
       console.log(error);

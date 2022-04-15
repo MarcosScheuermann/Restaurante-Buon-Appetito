@@ -3,7 +3,6 @@ import {useEffect, useState} from "react";
 import ProductCard from "../components/ProductCard/ProductCard"; 
 import {Row, Col } from 'react-bootstrap';
 import { Container } from "react-bootstrap";
-import { URL_PRODUCTS } from "../constants";
 
 
 const Products = () => {
