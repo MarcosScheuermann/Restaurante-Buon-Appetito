@@ -1,9 +1,9 @@
 const Layout = ({ children }) => {
-  return (
-  <>
-  {children}
-  </>
-  );
-}
-
-export default Layout;
+    return (
+    <>
+    {children}
+    </>
+    );
+  };
+  
+  export default Layout;
