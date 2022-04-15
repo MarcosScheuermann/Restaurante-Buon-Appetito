@@ -19,6 +19,7 @@ const LoginForm = () =>{
   const navigate = useNavigate();
   useEffect(()=>{
     if(auth){      
+      console.log(user);
       const userActivo = JSON.parse(localStorage.getItem('user')); 
       sweetalert2('Bienvenido!', userActivo);
       navigate('/admin');      
