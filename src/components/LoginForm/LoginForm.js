@@ -21,7 +21,7 @@ const LoginForm = () =>{
     if(auth){      
       const userActivo = JSON.parse(localStorage.getItem('user'));
       sweetalert2('Bienvenido!', userActivo);
-      navigate('/ContactForm');      
+      navigate('/admin');      
     }
   },[auth])
   
