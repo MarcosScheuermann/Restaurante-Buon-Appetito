@@ -34,22 +34,12 @@ const UserProvider = ({children}) => {
         const response = await axiosClient.get('/users/auth');
         console.log(response.data);
         setAuth(true);
-        setUser(response.data.user); 
-        
+        setUser(response.data.user);         
         localStorage.setItem('user', response.data.user.name);
         console.log(response.data.user.name); 
       } catch (error) {
         console.log(error);
         logout();
-        // setAuth(false);
-        // setUser(null);
-        // setToken(null);
-        // if(localStorage.getItem('token')){
-        //   localStorage.removeItem('token');
-        // }
-        // if(localStorage.getItem('user')){
-        //   localStorage.removeItem('user');
-        // }
       }      
     }
 

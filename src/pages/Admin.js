@@ -5,7 +5,7 @@ import { useContext } from "react";
 
 const Admin = () => {
   const {user}= useContext(UserContext);
-  console.log(user.name);
+  console.log(user);
     return (
     
       <Container className="mt-5">
