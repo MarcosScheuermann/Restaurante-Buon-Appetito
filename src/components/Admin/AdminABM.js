@@ -5,10 +5,11 @@ import AddModal from "../AddModal/AddModal";
 
 const AdminABM = () => {
   const [products, setProducts] = useState([]);
-    const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
+  let selected; 
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const getProducts = async () => {
     try {
@@ -17,20 +18,28 @@ const AdminABM = () => {
     } catch (error) {
       console.log(error);
     }
+  };
+const deleteProduct = async() => {
+  try {
+    await axiosClient.delete("products/"+ selected);
+  } catch (error) {
+    console.log(error);
   }
-  useEffect(()=>{
+}
+
+  useEffect(() => {
     getProducts();
-  },[])
+  }, []);
 
   return (
     <>
       <p>SOY ADMINISTRADOR MARCOS</p>
 
       <Container className="right-block">
-        <Button variant="dark" onClick={handleShow} className="m-3" >
+        <Button variant="dark" onClick={handleShow} className="m-3">
           Agregar Productos
         </Button>
-
+        <Button variant="danger" onClick={deleteProduct}>Borrar Producto</Button>
         <Table striped bordered hover>
           <thead>
             <tr>
@@ -41,7 +50,7 @@ const AdminABM = () => {
           </thead>
           <tbody>
             {products.map((product) => (
-              <tr key={product._id}>
+              <tr key={product._id} onClick= {()=>selected = product._id }>
                 <td>{product._id}</td>
                 <td>{product.name}</td>
                 <td>{product.abbreviation}</td>
@@ -49,11 +58,15 @@ const AdminABM = () => {
             ))}
           </tbody>
         </Table>
-        <AddModal show={show} handleClose={handleClose} setProducts = {setProducts} products={products} />
+        <AddModal
+          show={show}
+          handleClose={handleClose}
+          setProducts={setProducts}
+          products={products}
+        />
       </Container>
     </>
   );
-}
-
+};
 
 export default AdminABM;

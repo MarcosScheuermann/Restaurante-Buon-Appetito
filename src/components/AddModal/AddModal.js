@@ -42,7 +42,7 @@ const AddModal = ({show, handleClose, setProducts, products }) => {
                 name="abbreviation"
               />
             </FloatingLabel>
-            <Button className="primary-button" type="submit">Agregar</Button>
+            <Button className="primary-button" type="submit" onClick={handleClose}>Agregar</Button>
             </form>
         </Modal.Body>
       </Modal>
