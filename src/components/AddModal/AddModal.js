@@ -52,8 +52,8 @@ const AddModal = ({show, handleClose, setProducts, products }) => {
               type="submit"
               onClick={handleClose}
             >
-              {" "}
-              Agregar{" "}
+              
+              Agregar
             </Button>
           </form>
         </Modal.Body>
