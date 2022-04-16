@@ -35,7 +35,7 @@ const UserProvider = ({children}) => {
         console.log(response.data);
         setAuth(true);
         setUser(response.data.user);         
-        localStorage.setItem('user', response.data.user.name);
+        // localStorage.setItem('user', response.data.user.name);
         console.log(response.data.user.name); 
       } catch (error) {
         console.log(error);

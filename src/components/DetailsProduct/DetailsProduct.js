@@ -1,14 +1,11 @@
 import "./DetailsProduct.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Form } from "react-bootstrap";
-// import useGet from '../../hooks/useGet'
 import { useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom'
-import { URL_PRODUCTS } from "../../constants";
 
 export const DetailsProduct = () => {
 
-    // const product = useGet(URL_PRODUCTS + params.id)
     const params = useParams();
     const location = useLocation();
     const [cart, setCart] = useState([''])
@@ -44,13 +41,3 @@ export const DetailsProduct = () => {
 
 export default DetailsProduct;
 
-/* 
-        <>
-        <div className='infoProduct mt-50'>
-            <h2 className='text-danger'>$20</h2>
-            <p>Descripcion del producto</p>
-            <Button variant="success" className='w-25'>Agregar al Carrito</Button>{' '}
-            <Button variant="primary" className='w-25'>Volver</Button>{' '}
-        </div>
-        </>
-*/
