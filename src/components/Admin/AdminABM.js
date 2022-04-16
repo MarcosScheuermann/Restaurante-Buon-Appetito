@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import { Container, Table, Button } from "react-bootstrap";
 import axiosClient from "../../config/axiosClient";
 import AddModal from "../AddModal/AddModal";
+import "./AdminABM.css" 
 
 const AdminABM = () => {
   const [products, setProducts] = useState([]);
   const [show, setShow] = useState(false);
-  let selected; 
+  const [selected, setSelected] = useState(null); 
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -22,6 +23,7 @@ const AdminABM = () => {
 const deleteProduct = async() => {
   try {
     await axiosClient.delete("products/"+ selected);
+    setProducts(products.filter(product=>product._id!=selected))
   } catch (error) {
     console.log(error);
   }
@@ -50,11 +52,18 @@ const deleteProduct = async() => {
           </thead>
           <tbody>
             {products.map((product) => (
-              <tr key={product._id} onClick= {()=>selected = product._id }>
+              product._id==selected?
+              <tr key={product._id} onClick= {()=>setSelected(product._id)} className="selected">
+                <td>{product._id}</td>
+                <td>{product.name}</td>
+                <td>{product.abbreviation}</td>
+              </tr>:
+              <tr key={product._id} onClick= {()=>setSelected(product._id)}>
                 <td>{product._id}</td>
                 <td>{product.name}</td>
                 <td>{product.abbreviation}</td>
               </tr>
+
             ))}
           </tbody>
         </Table>
