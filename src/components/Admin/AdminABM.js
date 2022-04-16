@@ -32,6 +32,7 @@ const AdminABM = () => {
 
   useEffect(() => {
     getProducts();
+    deleteProduct();
   }, []);
 
   return (

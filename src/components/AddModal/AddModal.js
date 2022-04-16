@@ -2,6 +2,7 @@ import {Modal, Button, FloatingLabel, Form,} from "react-bootstrap";
 import axiosClient from "../../config/axiosClient";
 import { ADD_PRODUCT_VALUES } from "../../constants";
 import useForm from "../../hooks/useForm";
+import "./AddModal.css"
 
 const AddModal = ({show, handleClose, setProducts, products }) => {
     const addProduct = async (info) => {
@@ -23,27 +24,36 @@ const AddModal = ({show, handleClose, setProducts, products }) => {
             <FloatingLabel
               controlId="floatingInput"
               label="Producto"
-              className="mb-3"
+              className="mb-3 floating"
             >
               <Form.Control
                 type="text"
                 placeholder="Prod"
-                className="adasdasdas"
                 onKeyUp={handleKeyUp}
                 name="name"
+                className=""
               />
             </FloatingLabel>
-            <FloatingLabel controlId="floatingPassword" label="Abreviation">
+            <FloatingLabel
+              controlId="floatingPassword"
+              label="Abreviacion"
+              className="floating"
+            >
               <Form.Control
                 type="text"
                 placeholder="productito"
-                className=""
                 onKeyUp={handleKeyUp}
                 name="abbreviation"
+                className="mb-3"
               />
             </FloatingLabel>
-            <Button className="m-1 modal-boton" type="submit" onClick={handleClose}>
-              Agregar
+            <Button
+              className="m-1 modal-boton"
+              type="submit"
+              onClick={handleClose}
+            >
+              {" "}
+              Agregar{" "}
             </Button>
           </form>
         </Modal.Body>

@@ -9,7 +9,7 @@ const ProductDetail = () => {
     const id = params.id;
     const getProduct = async () =>{
         try {
-            const {data} = await axiosClient.get("/products/product/"+id);
+            const {data} = await axiosClient.get("/product/product"+id);
             setProduct(data.product)
         } catch (error) {
             console.log(error);

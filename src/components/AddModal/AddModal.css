@@ -1,3 +1,8 @@
 .modal-boton{
-    background-color: black !important;
+    background-color: var(--green-pantone) !important;
+}
+
+.floating{
+   color: red !important;
+
 }
