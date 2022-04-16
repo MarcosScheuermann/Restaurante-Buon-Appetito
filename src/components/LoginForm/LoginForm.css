@@ -1,21 +1,9 @@
-body {
-    margin: 0;
-    background-attachment: fixed;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-}
-
 form {
-    height: 100vh;
+    height: 70vh;
     margin: auto;
     color: white;
-    background-color: rgba(0, 0, 0, 0.4);
     padding: 10px 20px;
-    box-sizing: border-box;
     border-radius: 7;
-    -webkit-box-shadow: 5px 5px 15px 5px #000000;
-    box-shadow: 5px 5px 15px 5px #000000;
 }
 
 .background-login {

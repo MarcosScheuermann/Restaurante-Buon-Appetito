@@ -5,8 +5,7 @@ import spaghetti from "../assets/LandingImg/spaghetti.jpg";
 import Encabezado from "../components/Encabezado/Encabezado";
 import Slider from "../components/Slider/Slider";
 import Navbar from "../components/Header/Navbar";
-import "./LandingPage.css";
-import LoginForm from "../components/LoginForm/LoginForm";
+
 
 
 function LandingPage  ()  {
