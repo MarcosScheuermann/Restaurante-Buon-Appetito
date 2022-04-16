@@ -22,18 +22,18 @@ const AddModal = ({show, handleClose, setProducts, products }) => {
           <form onSubmit={handleSubmit}>
             <FloatingLabel
               controlId="floatingInput"
-              label="Nombre del Producto"
+              label="Producto"
               className="mb-3"
             >
               <Form.Control
                 type="text"
                 placeholder="Prod"
-                className=""
+                className="adasdasdas"
                 onKeyUp={handleKeyUp}
                 name="name"
               />
             </FloatingLabel>
-            <FloatingLabel controlId="floatingPassword" label="Abreviacion">
+            <FloatingLabel controlId="floatingPassword" label="Abreviation">
               <Form.Control
                 type="text"
                 placeholder="productito"
@@ -42,8 +42,10 @@ const AddModal = ({show, handleClose, setProducts, products }) => {
                 name="abbreviation"
               />
             </FloatingLabel>
-            <Button className="primary-button" type="submit" onClick={handleClose}>Agregar</Button>
-            </form>
+            <Button className="m-1 modal-boton" type="submit" onClick={handleClose}>
+              Agregar
+            </Button>
+          </form>
         </Modal.Body>
       </Modal>
     );

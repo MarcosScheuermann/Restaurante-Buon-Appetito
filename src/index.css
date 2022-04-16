@@ -15,7 +15,7 @@ code {
 /*@import url("https://fonts.googleapis.com/css2?family=Italianno&family=Roboto+Serif:ital,wght@1,100;1,200&display=swap");*/
 
 
-/* :root {
+:root {
         --old-mauve: #531D35ff;
         --gold-crayola: #E5C697ff;
         --indian-yellow: #D49B4Eff;
@@ -28,9 +28,9 @@ code {
         --rust: #B34D25ff;
         --imperial-red: #E13D3D;
         --green-pantone: #22A428;
-        /*--buon-font: 'Italianno', cursive;
-        --title-font: 'Roboto Serif', serif;
-}*/
+        /* /* --buon-font: 'Italianno', cursive;
+        --title-font: 'Roboto Serif', serif; */
+}
 
 
 /*.buon-font {

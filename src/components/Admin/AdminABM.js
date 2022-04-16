@@ -35,13 +35,13 @@ const deleteProduct = async() => {
 
   return (
     <>
-      <p>SOY ADMINISTRADOR MARCOS</p>
-
       <Container className="right-block">
-        <Button variant="dark" onClick={handleShow} className="m-3">
+        <Button variant="success" onClick={handleShow} className="m-3">
           Agregar Productos
         </Button>
-        <Button variant="danger" onClick={deleteProduct}>Borrar Producto</Button>
+        <Button variant="danger" onClick={deleteProduct}>
+          Borrar Producto
+        </Button>
         <Table striped bordered hover>
           <thead>
             <tr>
@@ -51,20 +51,25 @@ const deleteProduct = async() => {
             </tr>
           </thead>
           <tbody>
-            {products.map((product) => (
-              product._id==selected?
-              <tr key={product._id} onClick= {()=>setSelected(product._id)} className="selected">
-                <td>{product._id}</td>
-                <td>{product.name}</td>
-                <td>{product.abbreviation}</td>
-              </tr>:
-              <tr key={product._id} onClick= {()=>setSelected(product._id)}>
-                <td>{product._id}</td>
-                <td>{product.name}</td>
-                <td>{product.abbreviation}</td>
-              </tr>
-
-            ))}
+            {products.map((product) =>
+              product._id == selected ? (
+                <tr
+                  key={product._id}
+                  onClick={() => setSelected(product._id)}
+                  className="selected"
+                >
+                  <td>{product._id}</td>
+                  <td>{product.name}</td>
+                  <td>{product.abbreviation}</td>
+                </tr>
+              ) : (
+                <tr key={product._id} onClick={() => setSelected(product._id)}>
+                  <td>{product._id}</td>
+                  <td>{product.name}</td>
+                  <td>{product.abbreviation}</td>
+                </tr>
+              )
+            )}
           </tbody>
         </Table>
         <AddModal
