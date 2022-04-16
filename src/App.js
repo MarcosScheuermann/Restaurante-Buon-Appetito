@@ -10,6 +10,7 @@ import React from 'react'; //Fer//
 import AboutUs from "./components/AboutUs/AboutUs";  
 import PrivateRoute from "./routes/PrivateRoute";
 import ProductsProvider from "./context/ProductsContext";
+import ProductDetail from "./pages/ProductDetail";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
                 <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
                 <Route path="/producto" element={<ProductPage />} />
                 <Route path="/carrito" element={<CartPage />} />
-                <Route path="/AboutUs" element={<AboutUs />} />
+                <Route path="/aboutUs" element={<AboutUs />} />
+                <Route path="/product/:id" element={<PrivateRoute><ProductDetail /></PrivateRoute>} />
               </Routes>
             </Layout>
           </ProductsProvider>
