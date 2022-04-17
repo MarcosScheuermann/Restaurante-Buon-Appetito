@@ -5,6 +5,7 @@ import spaghetti from "../assets/LandingImg/spaghetti.jpg";
 import Encabezado from "../components/Encabezado/Encabezado";
 import Slider from "../components/Slider/Slider";
 import Navbar from "../components/Header/Navbar";
+import Footer from "../components/Footer/Footer";
 
 
 
@@ -28,6 +29,8 @@ function LandingPage  ()  {
         <Slider imageSrc={spaghetti}
         title={"Disfruta el momento"}
         subtitle={"crea recuerdos con las personas que quieres!"} flipped={true}/>
+
+        <Footer/>
         
       </div>
     

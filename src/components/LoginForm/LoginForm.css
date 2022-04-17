@@ -1,7 +1,8 @@
 form {
-    height: 70vh;
+    height: 60vh;
     margin: auto;
     color: white;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 20px;
     border-radius: 7;
 }
@@ -31,12 +32,11 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.7);
 }
 
 .login-icon {
     color: var(--gunmetal);
-    font-size: 30px;
+    font-size: 50px;
     margin-top: 5px;
 }
 
@@ -46,7 +46,7 @@ form {
 
 .login-button {
     height: 60px;
-    margin: 3px;
+    margin: 10px;
 }
 
 .container-buttons {

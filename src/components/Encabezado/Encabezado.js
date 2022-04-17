@@ -10,7 +10,7 @@ const Encabezado = ({imageSrc}) => {
             <img src={imageSrc} alt="Menu" className="hero_image" />
             
 
-            <h1 className="hero_title"> <img src={LogoBuonAppetito} alt="Logo" className="logo" /> Bienvenido a Buon Appetito.</h1>
+            <h1 className="hero_title">  Bienvenido a Buon Appetito. <img src={LogoBuonAppetito} alt="Logo" className="logo" /></h1>
             
         </div>
      );

@@ -1,0 +1,39 @@
+.main-footer {
+    width: 100%;
+    height: 100px;
+    color: white;
+    background-color: #E13D3D;
+    opacity: 0.9 !important;
+    position: fixed;
+    padding-top: 0.5em;
+    bottom: 0;
+}
+
+.logoFooter {
+    height: 65px;
+    width: 65px;
+}
+
+.list-unstyled {
+    font-size: 0.6rem;
+}
+
+._unstyled {
+    font-size: 1.7rem;
+    display: flex;
+}
+
+.row_footer {
+    font-size: 0.85rem;
+    display: flex;
+}
+
+.h4_Footer {
+    font-size: 1.1rem;
+    margin-bottom: 0.1rem;
+}
+
+.date_Footer {
+    font-size: 0.8rem;
+    margin-top: 0.1rem;
+}

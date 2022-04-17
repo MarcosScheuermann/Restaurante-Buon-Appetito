@@ -11,7 +11,6 @@ import { BiUserPin } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import "./LoginForm.css";
 
-
 const LoginForm = () => {
   const [error, setError] = useState(null);
   const { user, login, auth } = useContext(UserContext);
@@ -58,8 +57,8 @@ const LoginForm = () => {
     <div className="background-login">
       <div className="login-portada">
         <div className="login-portada-text">
-          <BiUserPin className="login-icon" />
-          <Form className="mt-0" onSubmit={handleSubmit}>
+          <Form className="mt-2" onSubmit={handleSubmit}>
+            <BiUserPin className="login-icon" />
             <Form.Group className="mb-2 mt-3" controlId="formBasicEmail">
               <Form.Label>Email</Form.Label>
               <Form.Control

@@ -8,8 +8,7 @@ import MarcosImg from "./../../assets/Integrantes/Marcos Scheuermann.jpeg";
 
 const AboutUs = () => {
   return (
-    <Container>
-      
+    <Container>      
         <h2 className="us-title">Diseñadores de Buon Appetito</h2>
         <div className="content-all">
           <div className="content-carrousel">

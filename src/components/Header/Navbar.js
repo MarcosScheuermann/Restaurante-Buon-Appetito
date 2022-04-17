@@ -3,6 +3,8 @@ import "./Navbar.css";
 import {HiMenuAlt2 } from "react-icons/hi";
 import {RiCloseFill } from "react-icons/ri";
 import {Link, useLocation} from "react-router-dom";
+import {AiOutlineLogin} from "react-icons/ai";
+import {MdOutlineSocialDistance, MdOutlineContactSupport} from "react-icons/md";
 
 
 
@@ -24,7 +26,7 @@ const Navbar = () => {
   return (
 
     <nav className="navbar">
-        <span className="navbar_logo">Buon Appetito</span>
+        <a className="navbar_logo" href="/" >Buon Appetito</a>
 
         {menuClick?(
           <HiMenuAlt2 size={25} className="navbar_menu" onClick={toggleMenu}/>
@@ -37,22 +39,22 @@ const Navbar = () => {
             {location.pathname=="/Login"?
             <>
             <li className="navbar_item" >
-              <Link className="navbar_link" to="/AboutUs">Nosotros</Link>
+              <Link className="navbar_link" to="/AboutUs"><MdOutlineSocialDistance className="m-2"/>Nosotros</Link>
             </li>
             <li className="navbar_item" >
-              <Link className="navbar_link" to="#">Contacto</Link>
+              <Link className="navbar_link" to="#"><MdOutlineContactSupport className="m-2"/>Contacto</Link>
             </li>
             </>
             :
             <>
             <li className="navbar_item" >
-              <Link className="navbar_link" to="/Login">Ingresar</Link>
+              <Link className="navbar_link" to="/Login"><AiOutlineLogin className="m-2"/>Ingresar</Link>
             </li>
             <li className="navbar_item" >
-              <Link className="navbar_link" to="/AboutUs">Nosotros</Link>
+              <Link className="navbar_link" to="/AboutUs"><MdOutlineSocialDistance className="m-2"/>Nosotros</Link>
             </li>
             <li className="navbar_item" >
-              <Link className="navbar_link" to="#">Contacto</Link>
+              <Link className="navbar_link" to="#"><MdOutlineContactSupport className="m-2"/>Contacto</Link>
             </li>
             </>
             }
