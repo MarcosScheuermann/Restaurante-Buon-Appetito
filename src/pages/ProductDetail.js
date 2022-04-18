@@ -23,7 +23,7 @@ console.log(product);
 
     return (
       <>
-        <p>DETALLE DE PRODUCTO</p>
+        <h3>DETALLE DE PRODUCTO</h3>
         <p>{product.name}</p>
         <p>{product.description}</p>
         <p>NADA</p>
