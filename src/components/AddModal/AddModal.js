@@ -41,7 +41,7 @@ const AddModal = ({show, handleClose, setProducts, products }) => {
             >
               <Form.Control
                 type="text"
-                placeholder="productito"
+                placeholder="Descrip"
                 onKeyUp={handleKeyUp}
                 name="description"
                 className=""
@@ -53,24 +53,14 @@ const AddModal = ({show, handleClose, setProducts, products }) => {
               className="mb-3 floating"
             >
               <Form.Control
-                type="text"
-                placeholder="productito"
+                type= "Number"
+                placeholder="P"
                 onKeyUp={handleKeyUp}
                 name="price"
                 className=""
               />
             </FloatingLabel>
-            <Button
-              className="m-1 modal-boton"
-              type="submit"
-              onClick={handleClose}
-            >
-<<<<<<< HEAD
-              
-=======
->>>>>>> f782d6bccc8b16367a07c38c59a0994959ce590d
-              Agregar
-            </Button>
+            <Button className="m-1 modal-boton" type="submit" onClick={handleClose}>Agregar</Button>
           </form>
         </Modal.Body>
       </Modal>
