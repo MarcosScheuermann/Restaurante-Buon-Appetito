@@ -32,9 +32,9 @@ const UserProvider = ({children}) => {
       }
       try {
         const response = await axiosClient.get('/users/auth');
-        setAuth(true);
         setUser(response.data.user); 
         localStorage.setItem('user', response.data.user.name);
+        setAuth(true);
         console.log(response.data.user.name); 
       } catch (error) {
         console.log(error);

@@ -17,11 +17,11 @@ const LoginForm = () =>{
   const navigate = useNavigate();
   useEffect(()=>{
     if(auth){      
-      const userActivo = JSON.parse(localStorage.getItem('user'));
+      const userActivo = user?.name;
       sweetalert2('Bienvenido!', userActivo);
       navigate('/admin');      
     }
-  },[auth])
+  },[auth,user]);
   
   const sweetalert2 = (titulo, msj) =>{
     let timerInterval;
