@@ -1,9 +1,7 @@
-//LOGIN JUAN
-
 import { useContext, useEffect, useState } from 'react';
 import {Form, Button, Alert, Nav} from 'react-bootstrap';
 import Swal from "sweetalert2";
-import { LOGIN_VALUES, URL_USERS } from '../../constants';
+import { LOGIN_VALUES } from '../../constants';
 import { UserContext } from '../../context/UserContext';
 import { validationLogin } from '../../helpers/validations';
 import useForm from '../../hooks/useForm';

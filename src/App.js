@@ -7,11 +7,11 @@ import UserProvider from "./context/UserContext";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Admin from "./pages/Admin";
-import React from 'react'; 
+import React from 'react'; //Fer//
 import AboutUs from "./components/AboutUs/AboutUs";  
 import PrivateRoute from "./routes/PrivateRoute";
-
 import ProductsProvider from "./context/ProductsContext";
+import ProductDetail from "./pages/ProductDetail";
 
 function App() {
   return (
@@ -21,21 +21,19 @@ function App() {
           <ProductsProvider>
             <Layout>
               <Routes>
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
-              <Route path='/producto' element={<ProductPage/>} />
-              <Route path='/carrito' element={<CartPage/>} />
-              <Route path="/aboutUs" element={<AboutUs />} />  
-
-
-              
-            </Routes>
-        </Layout>
-        </ProductsProvider>
-      </UserProvider>
-    </Router>
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/login" element={<Login /> }/>
+                <Route path="/register" element={<Register />} />
+                <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
+                <Route path="/producto" element={<ProductPage />} />
+                <Route path="/carrito" element={<CartPage />} />
+                <Route path="/aboutUs" element={<AboutUs />} />
+                <Route path="/product/:id" element={<ProductDetail />} />
+              </Routes>
+            </Layout>
+          </ProductsProvider>
+        </UserProvider>
+      </Router>
     </>
   );
 }
