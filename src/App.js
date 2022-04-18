@@ -42,7 +42,7 @@ function App() {
               {/* <Route path="/registro" element={<Register />} /> */}
               <Route path="/admin" element={<Admin />} />
               
-              <Route path='/producto' element={<ProductPage/>} />
+              <Route path='/productos/:id' element={<ProductPage/>} />
               <Route path='/carrito' element={<CartPage/>} />
               <Route path="/AboutUs" element={<AboutUs />} />
               <Route path="*" element={<LandingPage />} />
