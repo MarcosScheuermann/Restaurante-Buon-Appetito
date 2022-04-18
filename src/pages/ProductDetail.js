@@ -22,7 +22,7 @@ useEffect(()=>{
     return (
       <>
         <p>DETALLE DE PRODUCTO</p>
-        <p>{product.name}</p>
+        {/* <p>{product.name}</p> */}
         <p>NADA</p>
       </>
     );
