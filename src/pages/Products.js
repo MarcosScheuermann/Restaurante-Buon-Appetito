@@ -10,7 +10,7 @@ const Products = () => {
     useEffect(()=>{
         const getProducts = async()=>{
           try{
-            const response = await axios.get('http://localhost:3500/products');
+            const response = await axios.get('http://localhost:3500');
             const {data} = response;
              setProducts(data);
           }catch (error){
@@ -20,7 +20,7 @@ const Products = () => {
         getProducts();
     },[])
     return (
-      <Container className="mt-5">
+      <Container className="mt-5">        
         <Row xs={1} md={3} className="g-2">
         {products.map((product) => (
           <Col>
@@ -40,18 +40,3 @@ const Products = () => {
  
 export default Products;
 
-
-
-//Juan
-
-/*import { Container } from "react-bootstrap";
-
-const Productos = () => {
-    return ( 
-        <Container className="mt-5">
-    <h1>Productos</h1> 
-    </Container>
-     );
-}
- 
-export default Productos;*/
