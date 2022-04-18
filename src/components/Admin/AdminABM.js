@@ -3,7 +3,7 @@ import { Container, Table, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import axiosClient from "../../config/axiosClient";
 import AddModal from "../AddModal/AddModal";
-import "./AdminABM.css";
+import "./AdminABM.css"
 
 const AdminABM = () => {
   const [products, setProducts] = useState([]);
@@ -24,16 +24,15 @@ const AdminABM = () => {
   const deleteProduct = async () => {
     try {
       await axiosClient.delete("products/" + selected);
-      setProducts(products.filter((product) => product._id != selected));
+      setProducts(products.filter(product => product._id != selected))
     } catch (error) {
       console.log(error);
     }
-  };
+  }
 
   useEffect(() => {
     getProducts();
-    deleteProduct();
-  }, []);
+  },[]);
 
   return (
     <>
@@ -49,28 +48,27 @@ const AdminABM = () => {
             <tr>
               <th>id</th>
               <th>Nombre</th>
-              <th>Abreviacion</th>
+              <th>Descripcion</th>
+              <th>Precio</th>
               <th>Ver</th>
             </tr>
           </thead>
           <tbody>
             {products.map((product) =>
               product._id == selected ? (
-                <tr
-                key={product._id}
-                onClick={() => setSelected(product._id)}
-                className="selected products"
-                >
+                <tr key={product._id} onClick={() => setSelected(product._id)} className="selected products" >
                   <td>{product._id}</td>
                   <td>{product.name}</td>
-                  <td>{product.abbreviation}</td>
+                  <td>{product.description}</td>
+                  <td>{product.price}</td>
                   <td><Link to={`/product/${product._id}`}>Detalle de Producto</Link></td>
                 </tr>
               ) : (
                 <tr key={product._id} onClick={() => setSelected(product._id)} className="products">
                   <td>{product._id}</td>
                   <td>{product.name}</td>
-                  <td>{product.abbreviation}</td>
+                  <td>{product.description}</td>
+                  <td>{product.price}</td>
                   <td><Link to={`/product/${product._id}`}>Detalle de Producto</Link></td>
                 </tr>
               )

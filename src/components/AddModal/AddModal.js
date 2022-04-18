@@ -20,7 +20,7 @@ const AddModal = ({show, handleClose, setProducts, products }) => {
           <Modal.Title>Agregar Producto</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="h-100">
             <FloatingLabel
               controlId="floatingInput"
               label="Producto"
@@ -36,15 +36,28 @@ const AddModal = ({show, handleClose, setProducts, products }) => {
             </FloatingLabel>
             <FloatingLabel
               controlId="floatingPassword"
-              label="Abreviacion"
-              className="floating"
+              label="Descripcion"
+              className="mb-3 floating"
             >
               <Form.Control
                 type="text"
                 placeholder="productito"
                 onKeyUp={handleKeyUp}
-                name="abbreviation"
-                className="mb-3"
+                name="description"
+                className=""
+              />
+            </FloatingLabel>
+            <FloatingLabel
+              controlId="floatingPassword"
+              label="Precio"
+              className="mb-3 floating"
+            >
+              <Form.Control
+                type="text"
+                placeholder="productito"
+                onKeyUp={handleKeyUp}
+                name="price"
+                className=""
               />
             </FloatingLabel>
             <Button
@@ -52,7 +65,10 @@ const AddModal = ({show, handleClose, setProducts, products }) => {
               type="submit"
               onClick={handleClose}
             >
+<<<<<<< HEAD
               
+=======
+>>>>>>> f782d6bccc8b16367a07c38c59a0994959ce590d
               Agregar
             </Button>
           </form>
