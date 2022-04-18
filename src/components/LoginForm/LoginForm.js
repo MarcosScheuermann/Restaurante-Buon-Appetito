@@ -7,7 +7,7 @@ import { LOGIN_VALUES, URL_USERS } from "../../constants";
 import { UserContext } from "../../context/UserContext";
 import { validationLogin } from "../../helpers/validations";
 import useForm from "../../hooks/useForm";
-import { BiUserPin } from "react-icons/bi";
+import { AiOutlineLogin } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import "./LoginForm.css";
 
@@ -58,7 +58,7 @@ const LoginForm = () => {
       <div className="login-portada">
         <div className="login-portada-text">
           <Form className="mt-2" onSubmit={handleSubmit}>
-            <BiUserPin className="login-icon" />
+            <AiOutlineLogin className="login-icon" />
             <Form.Group className="mb-2 mt-3" controlId="formBasicEmail">
               <Form.Label>Email</Form.Label>
               <Form.Control

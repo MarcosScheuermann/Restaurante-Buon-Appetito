@@ -39,9 +39,14 @@ const Footer = () => {
             <h4 className="h4_Footer">
               <BsPeopleFill />
             </h4>
-            <ui className="_unstyled">
-              <li><BsInstagram/></li>
-              <li><BsFacebook/></li>
+            <ui>
+              
+              <a className="socialFooter" href="https://www.instagram.com/" target="_blank"><BsInstagram/></a>
+
+              
+              <a className="socialFooter" href="https://www.facebook.com/" target="_blank"><BsFacebook/></a>
+
+              
             </ui>
           </div>
         </div>
