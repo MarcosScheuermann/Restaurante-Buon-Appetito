@@ -19,11 +19,14 @@ useEffect(()=>{
     getProduct()
 },[]);
 
+console.log(product);
+
     return (
       <>
         <p>DETALLE DE PRODUCTO</p>
-        {/* <p>{product.name}</p> */}
-        <p>NO VEO LOS PRODUCTOS</p>
+        <p>{product.name}</p>
+        <p>{product.description}</p>
+        <p>NADA</p>
       </>
     );
 }

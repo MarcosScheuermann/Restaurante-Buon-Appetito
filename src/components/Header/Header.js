@@ -9,8 +9,8 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/LandinPage">Página principal</Nav.Link>
-            <Nav.Link href="/Login">Login</Nav.Link>
+            <Nav.Link href="/landinPage">Página principal</Nav.Link>
+            <Nav.Link href="/login">Login</Nav.Link>
             <NavDropdown title="Mas" id="collasible-nav-dropdown">
               <NavDropdown.Item href="/productos">Menú</NavDropdown.Item> {/*Fer*/}
               <NavDropdown.Item href="#">Promociones</NavDropdown.Item>
