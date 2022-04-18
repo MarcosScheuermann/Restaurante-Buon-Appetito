@@ -23,7 +23,7 @@ useEffect(()=>{
       <>
         <p>DETALLE DE PRODUCTO</p>
         {/* <p>{product.name}</p> */}
-        <p>NADA</p>
+        <p>NO VEO LOS PRODUCTOS</p>
       </>
     );
 }
