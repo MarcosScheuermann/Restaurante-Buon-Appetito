@@ -19,7 +19,7 @@ const LoginForm = () =>{
     if(auth){      
       const userActivo = user?.name;
       sweetalert2('Bienvenido!', userActivo);
-      navigate('/register');      
+      navigate('/aboutUs');      
     }
   },[auth,user]);
   
@@ -70,7 +70,7 @@ const LoginForm = () =>{
       <Button variant="success" className="login-button mt-1 mb-1" type="submit">
         Ingresar
       </Button>
-       <Button variant="light" className="login-button mt-1 mb-1" type="submit" onClick={navigate('/register')}>
+       <Button variant="light" className="login-button mt-1 mb-1" type="submit" onClick={navigate('/')}>
         Registrarse
       </Button>
       <Button variant="danger" className="login-button mt-1 mb-1 d-flex center" type="submit">
