@@ -1,7 +1,7 @@
 //LOGIN JUAN
 
 import { useContext, useEffect, useState } from 'react';
-import {Form, Button, Alert} from 'react-bootstrap';
+import {Form, Button, Alert, Nav} from 'react-bootstrap';
 import Swal from "sweetalert2";
 import { LOGIN_VALUES, URL_USERS } from '../../constants';
 import { UserContext } from '../../context/UserContext';
@@ -9,7 +9,7 @@ import { validationLogin } from '../../helpers/validations';
 import useForm from '../../hooks/useForm';
 import {BiUserPin} from 'react-icons/bi';
 import './LoginForm.css'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LoginForm = () =>{
   
@@ -22,7 +22,7 @@ const LoginForm = () =>{
       console.log(user);
       const userActivo = JSON.parse(localStorage.getItem('user')); 
       sweetalert2('Bienvenido!', userActivo);
-      navigate('/admin');      
+      navigate('/register');      
     }
   },[auth])
   
@@ -73,7 +73,7 @@ const LoginForm = () =>{
       <Button variant="success" className="login-button mt-1 mb-1" type="submit">
         Ingresar
       </Button>
-      <Button variant="light" className="login-button mt-1 mb-1" type="submit">
+       <Button variant="light" className="login-button mt-1 mb-1" type="submit" onClick={navigate('/register')}>
         Registrarse
       </Button>
       <Button variant="danger" className="login-button mt-1 mb-1 d-flex center" type="submit">

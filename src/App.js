@@ -5,6 +5,7 @@ import LandingPage from "./pages/LandingPage";
 import Layout from "./components/Layout/Layout";
 import UserProvider from "./context/UserContext";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 import Admin from "./pages/Admin";
 import React from 'react'; 
 import AboutUs from "./components/AboutUs/AboutUs";  
@@ -22,10 +23,12 @@ function App() {
               <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
               <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
               <Route path='/producto' element={<ProductPage/>} />
               <Route path='/carrito' element={<CartPage/>} />
-              <Route path="/aboutUs" element={<AboutUs />} />       
+              <Route path="/aboutUs" element={<AboutUs />} />  
+
 
               
             </Routes>

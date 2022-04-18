@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import {validationLogin , validateRegister} from './../helpers/validations';
 
 const useForm = (initialValues, submit, validations) => {
   const [values, setValues] = useState(initialValues);
@@ -21,7 +22,8 @@ const useForm = (initialValues, submit, validations) => {
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    setErrors(validations(values));
+    setErrors(validationLogin(values));  
+    setErrors(validateRegister(values));  
     setSubmitting(true);   
   }
 
