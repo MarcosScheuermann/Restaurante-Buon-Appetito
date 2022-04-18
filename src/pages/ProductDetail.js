@@ -22,8 +22,8 @@ useEffect(()=>{
     return (
       <>
         <p>DETALLE DE PRODUCTO</p>
-        {/* <h2>{product.name}</h2>
-        <p>{product.abbreviation}</p> */}
+        <p>{product.name}</p>
+        <p>NADA</p>
       </>
     );
 }
