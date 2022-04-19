@@ -9,8 +9,10 @@ const Encabezado = ({imageSrc}) => {
 
             <img src={imageSrc} alt="Menu" className="hero_image" />
             
+            <div>
 
-            <h1 className="hero_title"> <img src={LogoBuonAppetito} alt="Logo" className="logo" /> Bienvenido a Buon Appetito.</h1>
+            <h1 className="hero_title">  Pizzas y Pastas. <img src={LogoBuonAppetito} alt="Logo" className="logo" /></h1>
+            </div>
             
         </div>
      );

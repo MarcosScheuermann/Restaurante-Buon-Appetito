@@ -1,73 +1,73 @@
-import { Container, figure, carrousel, img} from "react-bootstrap";
-import "./AboutUs.css" 
+import "./AboutUs.css";
+import { Container } from "react-bootstrap";
+import LucasImg from "./../../assets/Integrantes/Lucas Ferruchi.jpeg";
+import GastonImg from "./../../assets/Integrantes/Gastón Devalis.jpg";
+import JuanImg from "./../../assets/Integrantes/Juan Ernesto Villegas.jpg";
+import FerImg from "./../../assets/Integrantes/Maria Fernanda Trujillo.jpg";
+import MarcosImg from "./../../assets/Integrantes/Marcos Scheuermann.jpeg";
 
 const AboutUs = () => {
-    return (
-        <Container>
-        <h2>Diseñadores de Buon Appetito</h2>
-        <div class="content-all">
-            <div class="content-carrousel"> 
-                <figure><img src="./../assets/img/integrantes/Gastón Devalis.jpg"/>
-                    <div class="image__overlay image__overlay--primary">
-                        <div class="image__title">Devalis, Gastón</div>
-                        <p class="image__description">
-                            Hobby: <br/>
-                            Hacer deportes
-                        </p>
-                    </div>
-                </figure>  
-                <figure><img src="./../assets/img/integrantes/Lucas Ferruchi.jpeg"/>
-                    <div class="image__overlay image__overlay--primary">
-                        <div class="image__title">Ferruchi, Lucas</div>
-                        <p class="image__description">
-                            Hobby: <br/>
-                            Hacer deportes
-                        </p>
-                    </div>
-                </figure>
-                <figure><img src="./../assets/img/integrantes/Marcos Scheuermann.jpeg"/>
-                    <div class="image__overlay image__overlay--primary">
-                        <div class="image__title">Scheuermann, Marcos</div>
-                        <p class="image__description">
-                            Hobby: <br/>
-                            Pasear a Bruno
-                        </p>
-                    </div>
-                </figure>
-                <figure><img src="./../assets/img/integrantes/Maria Fernanda Trujillo.jpg"/>
-                    <div class="image__overlay image__overlay--primary">
-                        <div class="image__title">Trujillo, M. Fernanda</div>
-                        <p class="image__description">
-                            Hobby: <br/>
-                            Trekking
-                        </p>
-                    </div>                
-                </figure>
-                
-                <figure><img src="./../assets/img/integrantes/Juan Ernesto Villegas.jpg"/>
-                <div class="image__overlay image__overlay--primary">
-                    <div class="image__title">Villegas, Juan Ernesto</div>
-                    <p class="image__description">
-                        Hobby: <br/>
-                        Fútbol - Trekking
-                    </p>
-                </div>
-                </figure>   
-                <figure><img src="./../assets/img/integrantes/Gastón Devails.jpg"/>
-                    <div class="image__overlay image__overlay--primary">
-                        <div class="image__title">Devails, Gastón</div>
-                        <p class="image__description">
-                            Hobby: <br/>
-                            Hacer deportes
-                        </p>
-                    </div>
-                </figure>
-                
-            </div>
-        </div> 
-    </Container> 
+  return (
+    <Container>      
+        <h2 className="us-title">Diseñadores de Buon Appetito</h2>
+        <div className="content-all">
+          <div className="content-carrousel">
+            <figure>
+              <img src={LucasImg} />
+              <div className="image__overlay image__overlay--primary">
+                <div className="image__title">Ferruchi, Lucas</div>
+                <p className="image__description">
+                  Hobby: <br />
+                  Hacer deportes
+                </p>
+              </div>
+            </figure>
+            <figure>
+              <img src={MarcosImg} />
+              <div className="image__overlay image__overlay--primary">
+                <div className="image__title">Scheuermann, Marcos</div>
+                <p className="image__description">
+                  Hobby: <br />
+                  Pasear a Bruno
+                </p>
+              </div>
+            </figure>
+            <figure>
+              <img src={FerImg} />
+              <div className="image__overlay image__overlay--primary">
+                <div className="image__title">Trujillo, M. Fernanda</div>
+                <p className="image__description">
+                  Hobby: <br />
+                  Trekking
+                </p>
+              </div>
+            </figure>
 
-);
-}
- 
+            <figure>
+              <img src={JuanImg} />
+              <div className="image__overlay image__overlay--primary">
+                <div className="image__title">Villegas, Juan Ernesto</div>
+                <p className="image__description">
+                  Hobby: <br />
+                  Fútbol - Trekking
+                </p>
+              </div>
+            </figure>
+            <figure>
+              <img src={GastonImg} />
+              <div className="image__overlay image__overlay--primary">
+                <div className="image__title">Devails, Gastón</div>
+                <p className="image__description">
+                  Hobby: <br />
+                  Hacer deportes
+                </p>
+              </div>
+            </figure>
+          </div>
+        </div>
+      
+    </Container>
+  );
+};
+
 export default AboutUs;
