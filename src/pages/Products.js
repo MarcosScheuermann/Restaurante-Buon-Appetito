@@ -4,6 +4,17 @@ import {Row, Col } from 'react-bootstrap';
 import { Container } from "react-bootstrap";
 import axiosClient from "../config/axiosClient";
 
+<<<<<<< HEAD
+=======
+import { Row, Col, Container } from "react-bootstrap";
+<<<<<<< HEAD
+import useGet from "../hooks/useGet";
+=======
+import useGet from "../hooks/useForm";
+>>>>>>> 26b10385b1380a893b00ed04d0fbc994eb0c0084
+import ProductCard from "../components/ProductCard/ProductCard";
+import { URL_PRODUCTS } from "../constants";
+>>>>>>> LucasFerruchi-develop
 
 const Products = () => {
  const[products,setProducts] = useState([]);
