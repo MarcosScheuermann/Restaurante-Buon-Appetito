@@ -1,9 +1,7 @@
 import { useContext } from "react";
 import { Container } from "react-bootstrap";
 import { UserContext } from "../context/UserContext";
-import { useContext } from "react";
 import AdminABM from "../components/Admin/AdminABM";
-import { UserContext } from "../context/UserContext";
 
 const Admin = () => {
   const {user}= useContext(UserContext);

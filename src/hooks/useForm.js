@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import {validationLogin , validateRegister} from './../helpers/validations';
+import {validationLogin } from './../helpers/validations';
+// import {validationLogin , validateRegister} from './../helpers/validations';
 
-const useForm = (initialValues, submit, validations) => {
+const useForm = (initialValues, submit, validation) => {
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState({});
   const[submitting, setSubmitting] = useState(false)
@@ -12,7 +13,8 @@ const useForm = (initialValues, submit, validations) => {
       }
       setSubmitting(false);
     }
-  },[errors])
+  },[errors]); 
+
   const handleKeyUp = (e) =>{
     setValues({
       ...values,
@@ -22,8 +24,12 @@ const useForm = (initialValues, submit, validations) => {
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    setErrors(validationLogin(values));  
-    setErrors(validateRegister(values));  
+    if(validation){
+      setErrors(validation(values));
+    }else{
+      setErrors({});
+    }
+    // setErrors(validateRegister(values));  
     setSubmitting(true);   
   }
 

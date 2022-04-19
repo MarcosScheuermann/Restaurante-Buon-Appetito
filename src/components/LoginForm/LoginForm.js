@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import {Form, Button, Alert, Nav} from 'react-bootstrap';
+import {Form, Button, Alert} from 'react-bootstrap';
 import Swal from "sweetalert2";
 import { LOGIN_VALUES } from '../../constants';
 import { UserContext } from '../../context/UserContext';
@@ -19,9 +19,9 @@ const LoginForm = () =>{
     if(auth){      
       const userActivo = user?.name;
       sweetalert2('Bienvenido!', userActivo);
-      navigate('/aboutUs');      
+      navigate('/admin');      
     }
-  },[auth,user]);
+ },[auth,user]);
   
   const sweetalert2 = (titulo, msj) =>{
     let timerInterval;
@@ -70,8 +70,15 @@ const LoginForm = () =>{
       <Button variant="success" className="login-button mt-1 mb-1" type="submit">
         Ingresar
       </Button>
-       <Button variant="light" className="login-button mt-1 mb-1" type="submit" onClick={navigate('/')}>
+      {/* onClick="{navigate('/')}" */}
+       {/* <Button variant="light" className="login-button mt-1 mb-1" type="submit" >
         Registrarse
+      </Button> */}
+      <Button onClick={navigate('/register')}>
+      
+      {/* <Link to="/register" className="btn btn-danger">
+          Registrarse
+          </Link> */}
       </Button>
       <Button variant="danger" className="login-button mt-1 mb-1 d-flex center" type="submit">
         Olvidé mi contraseña

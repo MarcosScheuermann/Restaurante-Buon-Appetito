@@ -86,7 +86,7 @@ const ModalRegister = ({show, handleClose, setUsers, users }) => {
                 className="mb-3"
               />
             </FloatingLabel>
-            <DropdownButton id="dropdown-variants-secondary" variant='secondary' title="Rol" name="role">
+            <DropdownButton id="dropdown-variants-secondary" className="m-1 modal-boton" variant='secondary' title="Rol" name="role">
               <Dropdown.Item href="#/action-1">USER</Dropdown.Item>
               <Dropdown.Item href="#/action-2">ADMIN</Dropdown.Item>
            </DropdownButton>

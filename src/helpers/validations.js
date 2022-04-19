@@ -18,42 +18,42 @@ export const validationLogin = (values) =>{
   }
 
   export const validateRegister = (values)=> {
-    let errors = {};
+    let errorsR = {};
     
     if (!values.name) {
-        errors.name = 'Nombre requerido';
+        errorsR.name = 'Nombre requerido';
     } 
     if (values.name.length < 3 || values.name.length >20) {
-        errors.name = 'El nombre debe tener entre 3 y 20 letras';
+        errorsR.name = 'El nombre debe tener entre 3 y 20 letras';
     }
     if (!values.lastname) {
-        errors.name = 'Apellido requerido';
+        errorsR.name = 'Apellido requerido';
     } 
     if (values.lastname.length < 3 || values.lastname.length >20) {
-        errors.name = 'El apellido debe tener entre 3 y 20 letras';
+        errorsR.name = 'El apellido debe tener entre 3 y 20 letras';
     }
     if(!values.email){
-      errors.email='Campo Email obligatorio.'
+      errorsR.email='Campo Email obligatorio.'
     } else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)){
-      errors.email='El email no es válido.';
+      errorsR.email='El email no es válido.';
     } else if(values.email.lenght >30 ){
-      errors.email='El email no puede tener más de 30 caracteres.';
+      errorsR.email='El email no puede tener más de 30 caracteres.';
     }
     if (!values.password) {
-        errors.password = 'Contraseña requerida';
+        errorsR.password = 'Contraseña requerida';
     } 
     if (values.password.length < 8 || values.password.length > 16) {
-        errors.password = 'La contraseña debe tener entre 8 y 16 caracteres';
+        errorsR.password = 'La contraseña debe tener entre 8 y 16 caracteres';
     }
     if (!values.password2) {
-        errors.password2 = 'Contraseña requerida';
+        errorsR.password2 = 'Contraseña requerida';
     } 
     if (values.password2 !== values.password) {
-        errors.password2 = 'Las contraseñas no coinciden';
+        errorsR.password2 = 'Las contraseñas no coinciden';
     }
 
     if (!values.role) {
-      errors.role = 'Rol requerido';
+      errorsR.role = 'Rol requerido';
   } 
-    return errors;
+    return errorsR;
 }
