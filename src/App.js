@@ -8,12 +8,6 @@ import AboutUs from "./pages/AboutUs";
 import Login from "./pages/Login";
 import ProductsProvider from "./context/ProductsContext";
 
-
-
-
-
-
-
 function App() {
   return (
     <>
