@@ -4,6 +4,7 @@ import LandingPage from "./pages/LandingPage";
 import UserProvider from "./context/UserContext";
 import React from 'react';
 import AboutUs from "./components/AboutUs/AboutUs";
+import PublicRoute from "./routes/PublicRoute";
 import PrivateRoute from "./routes/PrivateRoute";
 import ProductDetail from "./routes/PrivateRoute"
 import Layout from "./components/Layout/Layout";
@@ -21,7 +22,7 @@ function App() {
             <Layout>
               <Routes>
                 <Route path="/" element={<LandingPage />} />
-                <Route path="/login" element={<Login /> }/>
+                <Route path="/login" element={<PublicRoute><Login /></PublicRoute> }/>
                 <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
                 <Route path="/carrito" element={<CartPage />} />
                 <Route path="/products" element={<ProductCard />} />
