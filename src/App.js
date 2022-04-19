@@ -26,7 +26,7 @@ function App() {
                 <Route path="/product" element={<PrivateRoute><Products /></PrivateRoute>} />
                 <Route path="/carrito" element={<CartPage />} />
                 <Route path="/aboutUs" element={<AboutUs />} />
-                <Route path="/product/:id" element={<ProductDetail />} />
+                <Route path="/product/:id" element={<PrivateRoute><ProductDetail /></PrivateRoute>}/>
               </Routes>
             </Layout>
           </ProductsProvider>
