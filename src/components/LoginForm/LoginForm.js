@@ -1,13 +1,13 @@
-import { useContext, useEffect, useState } from 'react';
-import {Form, Button, Alert} from 'react-bootstrap';
+import { useContext, useEffect, useState } from "react";
+import {Form, Button, Alert} from "react-bootstrap";
 import Swal from "sweetalert2";
-import { LOGIN_VALUES } from '../../constants';
-import { UserContext } from '../../context/UserContext';
-import { validationLogin } from '../../helpers/validations';
-import useForm from '../../hooks/useForm';
+import { LOGIN_VALUES } from "../../constants";
+import { UserContext } from "../../context/UserContext";
+import { validationLogin } from "../../helpers/validations";
+import useForm from "../../hooks/useForm";
 // import {BiUserPin} from 'react-icons/bi';
-import { useNavigate } from 'react-router-dom';
 import { AiOutlineLogin } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 import './LoginForm.css';
 
 const LoginForm = () =>{
@@ -52,11 +52,12 @@ const LoginForm = () =>{
   const { handleKeyUp, handleSubmit, values,errors} = useForm(LOGIN_VALUES, login, validationLogin) 
  
   return (
+    <div className="background-login">
     <div className="login-portada">
       <div className="login-portada-text">
         {/* <BiUserPin className="login-icon"/> */}
+        <Form className="mt-2" onSubmit={handleSubmit}>
         <AiOutlineLogin className="login-icon" />
-        <Form className="w-75 mt-0" onSubmit={handleSubmit}>
           <Form.Group className="mb-2 mt-3" controlId="formBasicEmail">
             <Form.Label>Email</Form.Label>
             <Form.Control
@@ -111,6 +112,7 @@ const LoginForm = () =>{
                 ))}
           </div>
         </Form>
+      </div>
       </div>
     </div>
   );
