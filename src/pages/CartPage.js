@@ -1,4 +1,4 @@
-import Carrito from '../components/CarritoCompra/CarritoCompra'
+import Carrito from '../components/ShoppingCart/ShoppingCart'
 
 const CartPage = () => {
     return (

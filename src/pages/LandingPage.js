@@ -1,5 +1,3 @@
-
-// import "./LandingPage.css";
 import chef from "../assets/LandingImg/chef.jpg";
 import pizza from "../assets/LandingImg/pizza.jpg";
 import front from "../assets/LandingImg/front.jpg";
@@ -7,21 +5,19 @@ import spaghetti from "../assets/LandingImg/spaghetti.jpg";
 import Encabezado from "../components/Encabezado/Encabezado";
 import Slider from "../components/Slider/Slider";
 import Navbar from "../components/Header/Navbar";
+import Footer from "../components/Footer/Footer";
 
-const navbarLinks = [
-  { url: "/login", title: "Ingresar" },
-  { url: "/contactForm", title: "Contacto" },
-  { url: "/aboutUs", title: "Nosotros" },
-];
 
-    
+
 function LandingPage  ()  {
   return (
     
       <div className="App">
-        <Navbar navbarLinks={navbarLinks} />
+        <Navbar/>
 
         <Encabezado imageSrc={chef}/>
+
+        
         
         <Slider 
         imageSrc={pizza}
@@ -33,10 +29,12 @@ function LandingPage  ()  {
         <Slider imageSrc={spaghetti}
         title={"Disfruta el momento"}
         subtitle={"crea recuerdos con las personas que quieres!"} flipped={true}/>
+
+        <Footer/>
         
       </div>
     
   );
 };
 
-export default LandingPage
+export default LandingPage;

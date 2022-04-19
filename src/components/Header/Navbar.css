@@ -2,20 +2,26 @@
     position: sticky;
     top: 0px;
     height: 70px;
-    background-color: black;
-    opacity: 0.8 !important;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 30px 0px 30px;
+    padding: 10px 30px 0px 30px;
     margin-bottom: -70px;
+    background-color: #22A428;
+    opacity: 0.6 !important;
     z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar_logo {
     color: white;
+    text-decoration: none;
     font-family: "MonteCarlo", cursive;
     font-size: 2.5rem;
+}
+
+.navbar_logo:hover {
+    color: blanchedalmond !important;
+    transition: 250ms;
 }
 
 .navbar_list {
@@ -28,7 +34,7 @@
 }
 
 .navbar_link {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     text-decoration: none;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -41,6 +47,7 @@
 }
 
 .navbar_link:hover {
+    color: blanchedalmond !important;
     border-color: white;
     transition: 250ms;
 }
@@ -51,7 +58,17 @@
     display: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
+    .navbar_logo {
+        color: white;
+        text-decoration: none;
+        font-family: "MonteCarlo", cursive;
+        font-size: 2rem;
+    }
+    .navbar_logo:hover {
+        color: blanchedalmond !important;
+        transition: 250ms;
+    }
     .navbar_list {
         display: flex;
         flex-direction: column;
@@ -79,9 +96,9 @@
         flex: 1;
     }
     .navbar_link {
-        display: flex;
         height: 100%;
         width: 100%;
+        display: flex;
         justify-content: center;
         align-items: center;
         margin: 0px;

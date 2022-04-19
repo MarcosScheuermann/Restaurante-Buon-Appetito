@@ -1,4 +1,6 @@
 import { createContext, useState } from "react"
+import axiosClient from "../config/axiosClient";
+
 
 export const ProductsContext = createContext();
 
@@ -8,7 +10,7 @@ const ProductsProvider = ({children}) => {
     
     return ( 
         <ProductsContext.Provider value={{
-            products
+            products,
             
         }}>
 
