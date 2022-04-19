@@ -1,8 +1,8 @@
-import axios from "axios";
 import {useEffect, useState} from "react";
 import ProductCard from "../components/ProductCard/ProductCard"; 
 import {Row, Col } from 'react-bootstrap';
 import { Container } from "react-bootstrap";
+import axiosClient from "../config/axiosClient";
 
 
 const Products = () => {
@@ -10,7 +10,7 @@ const Products = () => {
     useEffect(()=>{
         const getProducts = async()=>{
           try{
-            const response = await axios.get('http://localhost:3500');
+            const response = await axiosClient.get('/products/product/');
             const {data} = response;
              setProducts(data);
           }catch (error){
