@@ -4,18 +4,14 @@ import CartPage from "./pages/CartPage";
 import LandingPage from "./pages/LandingPage";
 import Layout from "./components/Layout/layout";
 import UserProvider from "./context/UserContext";
-import CartProvider from "./context/CartContext";
 import Login from "./pages/Login";
 import Admin from "./pages/Admin";
 import React from 'react';
 import AboutUs from "./components/AboutUs/AboutUs";
-import Products from "./pages/Products";
 import ProductsProvider from "./context/ProductsContext";
-import AdminABM from "./components/Admin/AdminABM";
-import ShoppingCart from './components/ShoppingCart/ShoppingCart'
 import PrivateRoute from "./routes/PrivateRoute";
-import PublicRoute from "./routes/PublicRoute";
-import ProductDetail from "./pages/ProductDetail";
+import ProductDetail from "./routes/PrivateRoute"
+
 
 function App() {
   return (
@@ -30,7 +26,7 @@ function App() {
                 <Route path="/admin" element={<Admin />} />
                 <Route path="/carrito" element={<CartPage />} />
                 <Route path="/aboutUs" element={<AboutUs />} />
-                <Route path="/product/:id" element={<PrivateRoute><ProductPage /></PrivateRoute>}/>
+                <Route path="/product/:id" element={<PrivateRoute><ProductDetail /></PrivateRoute>}/>
               </Routes>
             </Layout>
           </ProductsProvider>
