@@ -12,7 +12,7 @@ const Products = () => {
           try{
             const response = await axiosClient.get('/products/product/');
             const {data} = response;
-             setProducts(data);
+             setProducts(data.products);
           }catch (error){
               console.warn(error);
           }
