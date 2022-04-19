@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Container } from "react-bootstrap";
-import AdminABM from "../components/Admin/AdminABM";
 import { UserContext } from "../context/UserContext";
+import AdminABM from "../components/Admin/AdminABM";
 
 const Admin = () => {
   const {user}= useContext(UserContext);
@@ -9,7 +9,9 @@ const Admin = () => {
     return (
     
       <Container className="mt-5">
-        <h2>Tabla de Administracion</h2>
+        <h1>Tabla de Administracion</h1>
+        <p>ABM de Productos</p>
+        
        <AdminABM />
       </Container>
     

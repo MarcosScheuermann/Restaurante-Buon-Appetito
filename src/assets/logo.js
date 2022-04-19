@@ -1,4 +1,4 @@
-import BuonAppetito from "./LogoBuonAppetito.jpg";
+import BuonAppetito from "../assets/Logo/BuonAppetito.jpg";
 import BuonAppetitoICO from "../Logo/BuonAppetitoICO.jpg";
 import LogoBuonAppetito from "../Logo/BuonAppetito.png";
 
