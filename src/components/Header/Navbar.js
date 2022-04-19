@@ -36,10 +36,10 @@ const Navbar = () => {
 
       <ul className={menuClick ? "navbar_list" : "navbar_list navbar_list--active"}>
         
-            {location.pathname=="/Login"?
+            {location.pathname=="/login"?
             <>
             <li className="navbar_item" >
-              <Link className="navbar_link" to="/AboutUs"><MdOutlineSocialDistance className="m-2"/>Nosotros</Link>
+              <Link className="navbar_link" to="/aboutUs"><MdOutlineSocialDistance className="m-2"/>Nosotros</Link>
             </li>
             <li className="navbar_item" >
               <Link className="navbar_link" to="#"><MdOutlineContactSupport className="m-2"/>Contacto</Link>
@@ -48,10 +48,10 @@ const Navbar = () => {
             :
             <>
             <li className="navbar_item" >
-              <Link className="navbar_link" to="/Login"><AiOutlineLogin className="m-2"/>Ingresar</Link>
+              <Link className="navbar_link" to="/login"><AiOutlineLogin className="m-2"/>Ingresar</Link>
             </li>
             <li className="navbar_item" >
-              <Link className="navbar_link" to="/AboutUs"><MdOutlineSocialDistance className="m-2"/>Nosotros</Link>
+              <Link className="navbar_link" to="/aboutUs"><MdOutlineSocialDistance className="m-2"/>Nosotros</Link>
             </li>
             <li className="navbar_item" >
               <Link className="navbar_link" to="#"><MdOutlineContactSupport className="m-2"/>Contacto</Link>
