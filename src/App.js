@@ -9,6 +9,7 @@ import ProductDetail from "./routes/PrivateRoute"
 import Layout from "./components/Layout/Layout";
 import Admin from "./pages/Admin";
 import Login from "./pages/Login";
+import Contact from "./pages/Contact"
 import ProductsProvider from "./context/ProductsContext";
 import ProductCard from "./components/ProductCard/ProductCard";
 
@@ -22,6 +23,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/login" element={<Login /> }/>
+                <Route path="/contact" element={<Contact />} />
                 <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
                 <Route path="/carrito" element={<CartPage />} />
                 <Route path="/products" element={<ProductCard />} />
