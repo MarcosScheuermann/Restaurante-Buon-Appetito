@@ -1,74 +1,114 @@
 //Register JUAN
 
-// import axios from 'axios';
-// import {Form, Button, DropdownButton, Dropdown} from 'react-bootstrap';
-// import { useNavigate } from 'react-router-dom';
-// // import { URL_USERS } from '../../constants';
-// import useForm from '../../hooks/useForm';
-// // import useGet from '../../hooks/useGet';
-// import Axiosclient from '../../config/axiosClient';
-// import React, { useRef, useEffect, useState} from 'react';
-// import { validateRegister } from '../../helpers/validations'
-// import Mail from '../mail';
-// import './RegisterForm.css'
+import { useEffect, useState } from "react";
+import { Container, Table, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import axiosClient from "../../config/axiosClient";
+import Mail from '../mail';
+import ModalRegister from '../ModalRegister/ModalRegister';
+import './RegisterForm.css'
 
-// const RegisterForm = () => {
-//   const initialValues={
-//     name:'',
-//     password:'',
-//     email:''  
-//   }
-//   const navigate = useNavigate();
+const RegisterForm = () => {
+  const [users, setUsers] = useState([]);
+  const [show, setShow] = useState(false);
+  const [selected, setSelected] = useState(null);
 
-//   const chequear = async ()=>{
-//     const users = await Axiosclient.get('/users');
-//     const repeatedUser = users.find(user=>user.email === values.email);
-//     if(repeatedUser){
-//       alert('El mail ingresado ya existe')
-//     }else{
-//       setErrors(validateRegister(values))
-//     if (!errors.email && !errors.name && !errors.lastname && !errors.password && !errors.password2 && !errors.role) {
-//       alert('Registrar') 
-//       // register(values);
-//     }
-//       // axios.post(URL_USERS,values);
-//       // navigate('/login');
-//     }
-//   }
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-//   useEffect(() => {
-//     chequear();  
-//   }, []);
+  const getUsers = async () => {
+    try {
+      const response = await axiosClient.get("/users/");
+      setUsers(response.data.users);
+      console.log(response.data.users);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const deleteUser = async () => {
+    try {
+      await axiosClient.delete("users/" + selected);
+      setUsers(users.filter((user) => user._id != selected));
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
+  useEffect(() => {
+    getUsers();
+  }, []);
 
+  return (
+    <>
+      <Container className="right-block">
+        <Button variant="success" onClick={handleShow} className="m-3">
+          Agregar Usuario
+        </Button>
+        <Button variant="danger" onClick={deleteUser}>
+          Borrar Usuario
+        </Button>
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+               <th>id</th>
+               <th>Nombre</th>
+               <th>Apellido</th>
+               <th>Email</th>
+               <th>Rol</th>
+            </tr>
+          </thead>
+          <tbody>
+            {users.map((user) =>
+              user._id == selected ? (
+                <tr
+                  key={user._id}
+                  onClick={() => setSelected(user._id)}
+                  className="selected users"
+                >
+                  <td>{user._id}</td>
+                  <td>{user.name}</td>
+                  <td>{user.lastname}</td>
+                  <td>{user.email}</td>
+                  <td>{user.rol}</td>
+                  <td>
+                    <Link to={`/user/${user._id}`}>
+                      Detalle de Usuario
+                    </Link>
+                  </td>
+                </tr>
+              ) : (
+                <tr
+                  key={user._id}
+                  onClick={() => setSelected(user._id)}
+                  className="users"
+                >
+                  <td>{user._id}</td>
+                  <td>{user.name}</td>
+                  <td>{user.lastname}</td>
+                  <td>{user.email}</td>
+                  <td>{user.rol}</td>
+                  <td>
+                    <Link to={`/user/${user._id}`}>
+                      Detalle de Usuario
+                    </Link>
+                  </td>
+                </tr>
+              )
+            )}
+          </tbody>
+        </Table>
+        <ModalRegister
+          show={show}
+          handleClose={handleClose}
+          setUsers={setUsers}
+          users={users}
+        />
+      </Container>
+    </>
+  );
+};
 
-//   const [errors, setErrors] = useState({
-//     name:null,
-//     lastname:null,
-//     country:null,
-//     email: null,
-//     password: null,
-//     password2:null    
-// })
-// useEffect(() => {
-// setErrors({
-//     name:errors.name,
-//     lastname:errors.lastname,
-//     email:errors.email,
-//     password:errors.password,
-//     password2:errors.password2,
-//     role:errors.role    
-// })
-// }, [errors.name,errors.lastname,errors.email,errors.password,errors.password2,errors.role])
-
-// // const handleOnChange = (e) => {
-// // setValues(
-// //     {
-// //         ...values,
-// //         [e.target.name]: e.target.value
-// //     }
-// // )
-// // }
+export default RegisterForm;
 
 
 //   const {values, handleKeyUp, handleSubmit}= useForm(initialValues,chequear);
@@ -119,123 +159,163 @@
 
 ////////////////////////////////////////////////
 
-import {Form, Button, DropdownButton, Dropdown, Container} from 'react-bootstrap';
-import Table from 'react-bootstrap/Table'
-import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
+// import {Form, Button, DropdownButton, Dropdown, Container} from 'react-bootstrap';
+// import Table from 'react-bootstrap/Table'
+// import { Link } from "react-router-dom";
+// import { useNavigate } from 'react-router-dom';
+// import useForm from '../../hooks/useForm';
+// import axiosClient from '../../config/axiosClient';
+// import React, { useRef, useContext, useEffect, useState} from 'react';
+// import { validateRegister } from '../../helpers/validations'
+// import { UserContext } from '../../context/UserContext';
+// import Mail from '../mail';
+// import './RegisterForm.css'
+// import ModalRegister from '../ModalRegister/ModalRegister';
 
-import useForm from '../../hooks/useForm';
+// const RegisterForm = () => {
+//   const [users, setUsers] = useState([]);
+//   const {getUser, deleteUser} = useContext(UserContext);
+//   const [show, setShow] = useState(false);
+//   const [selected, setSelected] = useState(null);
 
-import axiosClient from '../../config/axiosClient';
-import React, { useRef, useEffect, useState} from 'react';
-import { validateRegister } from '../../helpers/validations'
-import Mail from '../mail';
-import './RegisterForm.css'
-import ModalRegister from '../ModalRegister/ModalRegister';
+//   const handleClose = () => setShow(false);
+//   const handleShow = () => setShow(true);
 
-const RegisterForm = () => {
-  const [users, setUsers] = useState([]);
-  const [show, setShow] = useState(false);
-  const [selected, setSelected] = useState(null);
+//   const getUsers = async () => {
+//     try {
+//       const response = await axiosClient.get("/users");
+//       setUsers(response.data.users);
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   };
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+//   // const deleteUser = async () => {
+//   //   try {
+//   //     await axiosClient.delete("users/" + selected);
+//   //     setUsers(users.filter((user) => user._id != selected));
+//   //   } catch (error) {
+//   //     console.log(error);
+//   //   }
+//   // };
 
-  const getUsers = async () => {
-    try {
-      const response = await axiosClient.get("/users");
-      setUsers(response.data.users);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+//   useEffect(() => {
+//     getUsers();
+//   }, []);
 
-  const deleteUser = async () => {
-    try {
-      await axiosClient.delete("users/" + selected);
-      setUsers(users.filter((user) => user._id != selected));
-    } catch (error) {
-      console.log(error);
-    }
-  };
+//   const [modalShow, setModalShow] = useState(false);
+ 
 
-  /////////////////
+//   const handleDelete = (e)=>{
+//       e.preventDefault();
+//       deleteUser(e.target.parentElement.parentElement.id)
+//   }
+//   const handleEdit = (e)=>{
+//       e.preventDefault();
+//       getUser(e.target.parentElement.parentElement.id)
+//       setShow(true)
+//   }
 
-  useEffect(() => {
-    getUsers();
-  }, []);
+//   return (
+//     <>
+//       <Container className="right-block">
+//         <Button variant="success" onClick={handleShow} className="m-3">
+//             Agregar Usuario
+//         </Button>
+//         {/* <Button variant="danger" onClick={deleteUser}>
+//           Borrar Usuario
+//         </Button> */}
+//         <Table striped bordered hover>
+//           <thead>
+//             <tr>
+//               <th>id</th>
+//               <th>Nombre</th>
+//               <th>Apellido</th>
+//               <th>Email</th>
+//               <th>Rol</th>
+//             </tr>
+//           </thead>
+//               <tbody>
+//                     {users.length === 0 ? (
+//                         <tr>
+//                             <td colSpan='4'>No hay usuarios registrados</td>
+//                         </tr>
+//                     ) :
+//                                 users.map((user, index) => (
+//                                     <tr id={user._id} key={index}>
+//                                         <td>{index}</td>
+//                                         <td>{user.name}</td>
+//                                         <td>{user.lastname}</td>                                        
+//                                         <td>{user.email}</td>
+//                                         <td>{user.role}</td>
+//                                         <td className='text-center'>
+//                                             <Button onClick={handleEdit}>Editar usuario</Button>
+//                                         </td>
+//                                         <td className='text-center'>
+//                                             <Button onClick={handleDelete}>Eliminar usuario</Button>
+//                                         </td>
+//                                     </tr>
+//                                 ))}
+//                         </tbody>
 
-  return (
-    <>
-      <Container className="right-block">
-        <Button variant="success" onClick={handleShow} className="m-3">
-            Agregar Usuario
-        </Button>
-        <Button variant="danger" onClick={deleteUser}>
-          Borrar Usuario
-        </Button>
-        <Table striped bordered hover>
-          <thead>
-            <tr>
-              <th>id</th>
-              <th>Nombre</th>
-              <th>Apellido</th>
-              <th>Email</th>
-              <th>Rol</th>
-            </tr>
-          </thead>
-          <tbody>
-            {users.map((user) =>
-              user._id == selected ? (
-                <tr
-                  key={user._id}
-                  onClick={() => setSelected(user._id)}
-                  className="selected users"
-                >
-                  <td>{user._id}</td>
-                  <td>{user.name}</td>
-                  <td>{user.lastname}</td>
-                  <td>{user.email}</td>
-                  <td>{user.rol}</td>
-                  <td>
-                    <Link to={`/user/${user._id}`}>
-                      Detalle de Usuario
-                    </Link>
-                  </td>
-                </tr>
-              ) : (
-                <tr
-                  key={user._id}
-                  onClick={() => setSelected(user._id)}
-                  className="users"
-                >
-                  <td>{user._id}</td>
-                  <td>{user.name}</td>
-                  <td>{user.lastname}</td>
-                  <td>{user.email}</td>
-                  <td>{user.rol}</td>
-                  <td>
-                    <Link to={`/user/${user._id}`}>
-                      Detalle de Usuario
-                    </Link>
-                  </td>
-                </tr>
-              )
-            )}
-          </tbody>
-        </Table>
-        <ModalRegister
-        show={show}
-        setUsers={setUsers}
-        users={users}
-        handleClose={handleClose}
-        />
-      </Container>
-    </>
-  );
-};
 
-export default RegisterForm;
+//           {/* <tbody>
+//             {users.map((user) =>
+//               user._id == selected ? (
+//                 <tr
+//                   key={user._id}
+//                   onClick={() => setSelected(user._id)}
+//                   className="selected users"
+//                 >
+//                   <td>{user._id}</td>
+//                   <td>{user.name}</td>
+//                   <td>{user.lastname}</td>
+//                   <td>{user.email}</td>
+//                   <td>{user.rol}</td>
+//                   <td>
+//                     <Link to={`/user/${user._id}`}>
+//                       Detalle de Usuario
+//                     </Link>
+//                   </td>
+//                 </tr>
+//               ) : (
+//                 <tr
+//                   key={user._id}
+//                   onClick={() => setSelected(user._id)}
+//                   className="users"
+//                 >
+//                   <td>{user._id}</td>
+//                   <td>{user.name}</td>
+//                   <td>{user.lastname}</td>
+//                   <td>{user.email}</td>
+//                   <td>{user.rol}</td>
+//                   <td>
+//                     <Link to={`/user/${user._id}`}>
+//                       Detalle de Usuario
+//                     </Link>
+//                   </td>
+//                 </tr>
+//               )
+//             )}
+//           </tbody> */}
+//         </Table>
+//         <ModalRegister
+//         show={show}
+//         setUsers={setUsers}
+//         users={users}
+//         handleClose={handleClose}
+//         />
+//       </Container>
+//     </>
+//   );
+// };
+
+// export default RegisterForm;
+
+
+
+
+
 
 
 

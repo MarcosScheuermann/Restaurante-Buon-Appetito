@@ -15,8 +15,9 @@ const AdminABM = () => {
 
   const getProducts = async () => {
     try {
-      const response = await axiosClient.get("/products");
+      const response = await axiosClient.get("/products/");
       setProducts(response.data.products);
+      console.log(response.data.products);
     } catch (error) {
       console.log(error);
     }

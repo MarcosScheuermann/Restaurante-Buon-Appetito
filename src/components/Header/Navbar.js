@@ -1,16 +1,17 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import "./Navbar.css";
 import {HiMenuAlt2 } from "react-icons/hi";
 import {RiCloseFill } from "react-icons/ri";
 import {Link, useLocation} from "react-router-dom";
 import {AiOutlineLogin} from "react-icons/ai";
 import {MdOutlineSocialDistance, MdOutlineContactSupport} from "react-icons/md";
+import { UserContext } from "../../context/UserContext";
 
 
 
 
 const Navbar = () => {
-
+  const {auth, logout, user} = useContext(UserContext);
   const location = useLocation()
   console.log(location)
 
@@ -44,6 +45,24 @@ const Navbar = () => {
             <li className="navbar_item" >
               <Link className="navbar_link" to="#"><MdOutlineContactSupport className="m-2"/>Contacto</Link>
             </li>
+            </>
+            :
+            auth? 
+            <>
+            <li className="navbar_item" >
+              <Link className="navbar_link" to="/aboutUs"><MdOutlineSocialDistance className="m-2"/>Nosotros</Link>
+            </li>
+            <li className="navbar_item" >
+              <Link className="navbar_link" to="#"><MdOutlineContactSupport className="m-2"/>Contacto</Link>
+            </li>
+            <li className="navbar_item" >
+              <Link className="navbar_link" to="#" onClick={logout}><MdOutlineContactSupport className="m-2" />Cerrar sesión</Link>
+            </li>
+            {user?.role=='ADMIN'?
+            <li className="navbar_item" >
+              <Link className="navbar_link" to="/admin" ><MdOutlineContactSupport className="m-2" />Administrar</Link>
+            </li>
+            :null}
             </>
             :
             <>

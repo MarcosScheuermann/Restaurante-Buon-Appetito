@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-.AboutUs body{
-    /* background-image: url('./../../assets/img/pizza-3010062_1280.jpg');  */
-    margin: 0;
-    background-attachment: fixed;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-  }
-  
-form{
-    width: 100%;
-    height: 100vh;
-    margin: auto;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 10px 20px;
-    box-sizing: border-box;
-    border-radius: 7;
-    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-    box-shadow: 5px 5px 15px 5px #000000;
-  }
-
- h3{
-    
-    padding: 1.5em 0 1em 0;
-    text-align: center;
-    color: #efba5b;
-    z-index: 1;
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.671);
-=======
 .content-all {
     width: 210px;
     margin: auto;
@@ -37,7 +6,6 @@ form{
     margin-top: 25px;
     background-attachment: fixed;
     background-size: cover;
->>>>>>> d591e8846d4f1503daa379dd6f3f0a60ff9f413d
 }
 
 .us-title {
@@ -113,11 +81,7 @@ form{
     transition: all 300ms;
 }
 
-<<<<<<< HEAD
-  .image__overlay {
-=======
 .image__overlay {
->>>>>>> d591e8846d4f1503daa379dd6f3f0a60ff9f413d
     position: absolute;
     top: 0;
     left: 0;

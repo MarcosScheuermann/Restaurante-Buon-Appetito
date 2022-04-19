@@ -12,6 +12,7 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import PrivateRoute from "./routes/PrivateRoute";
 import ProductsProvider from "./context/ProductsContext";
 import ProductDetail from "./pages/ProductDetail";
+import Products from "./pages/Products";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
                 <Route path="/login" element={<Login /> }/>
                 <Route path="/register" element={<Register />} />
                 <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
-                <Route path="/producto" element={<ProductPage />} />
+                <Route path="/products" element={<PrivateRoute><Products /></PrivateRoute>} />
                 <Route path="/carrito" element={<CartPage />} />
                 <Route path="/aboutUs" element={<AboutUs />} />
                 <Route path="/product/:id" element={<PrivateRoute><ProductDetail /></PrivateRoute>}/>

@@ -10,9 +10,9 @@ const Products = () => {
     useEffect(()=>{
         const getProducts = async()=>{
           try{
-            const response = await axiosClient.get('/products/product/');
+            const response = await axiosClient.get('/products/');
             const {data} = response;
-             setProducts(data);
+             setProducts(data.products);
           }catch (error){
               console.warn(error);
           }
@@ -26,10 +26,10 @@ const Products = () => {
           <Col>
             <ProductCard
             className="m-3"
-            id={product.id}
+            id={product._id}
             title={product.name}
             description={product.description}
-            image={product.image}
+            image={product.image}        
             />
           </Col>
         ))}
