@@ -1,7 +1,6 @@
 import { Col } from "react-bootstrap";
 import { Button, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import CartBadge from '../CartBadge/CartBadge';
 
 const DetailsProduct = () => {
 
@@ -10,7 +9,7 @@ const DetailsProduct = () => {
         <Col xs={6}>
           <img
             className="w-100"
-            src={image}
+            src=''
           />
         </Col>
         <Col xs={6}>
@@ -20,7 +19,7 @@ const DetailsProduct = () => {
                 <h2>Precio:  </h2>
               </Form.Text>
               <Form.Text className="text-dark">
-                <h3>Nombre</h3>
+                <h3>Nombre:</h3>
               </Form.Text>
               <Form.Text>
                 <h6>Descripcion detallada del producto</h6>
@@ -39,7 +38,6 @@ const DetailsProduct = () => {
             </Button>
           </Form>
         </Col>
-      <CartBadge></CartBadge>
     </>
     )
 };

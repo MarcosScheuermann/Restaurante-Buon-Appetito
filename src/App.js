@@ -13,51 +13,29 @@ import Products from "./pages/Products";
 import ProductsProvider from "./context/ProductsContext";
 import AdminABM from "./components/Admin/AdminABM";
 import ShoppingCart from './components/ShoppingCart/ShoppingCart'
+import PrivateRoute from "./routes/PrivateRoute";
+import PublicRoute from "./routes/PublicRoute";
+import ProductDetail from "./pages/ProductDetail";
 
 function App() {
   return (
     <>
       <Router>
-      <CartProvider> 
-      <UserProvider>
-      <ProductsProvider>
-        {/* <ProductsState> */}
-          <Layout>
-            <Routes>
-              {/* <Route path="*" element={<PublicRoute><LandingPage /></PublicRoute>} />
-              <Route path="/" element={<PublicRoute><LandingPage /></PublicRoute>} /> */}
-              {/* -- */}
-              {/* <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} /> */}
-              {/* <Route path="/registro" element={<PublicRoute><Register /></PublicRoute>} /> */}
-               {/* -- */}
-              {/* <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} /> */}
-              {/* <Route path="/admin" element={<AdminRoute><Admin /></AdminRoute>} /> */}
-              {/* <Route path="/productos" element={<PrivateRoute><Products /></PrivateRoute>} />
-              <Route path="/productos/:id" element={<PrivateRoute><ProductDetail /></PrivateRoute>} /> */}
-              
-              <Route path="/" element={<LandingPage />} />
-              {/* <Route path="/home" element={<Home />} /> */}
-              {/* <Route path="/home" element={<Home />} /> */}
-              <Route path="/login" element={<Login />} />
-              {/* <Route path="/registro" element={<Register />} /> */}
-              <Route path="/admin" element={<Admin />} />
-              
-              <Route path='/productos/:id' element={<ProductPage/>} />
-              <Route path='/carrito' element={<CartPage/>} />
-              <Route path="/AboutUs" element={<AboutUs />} />
-              <Route path="*" element={<LandingPage />} />
-              <Route path="/productos" element={<Products />} />
-              <Route path="/carrito" element={<ShoppingCart />} />
-              {/* <Route path="/nosotros" element={<Nosotros />} />
-              <Route path="/productos" element={<Productos />} /> */}
-              {/* <Route path="/productos/:id" element={<ProductDetail />} /> */}
-            </Routes>
+        <UserProvider>
+          <ProductsProvider>
+            <Layout>
+              <Routes>
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/login" element={<Login /> }/>
+                <Route path="/admin" element={<Admin />} />
+                <Route path="/carrito" element={<CartPage />} />
+                <Route path="/aboutUs" element={<AboutUs />} />
+                <Route path="/product/:id" element={<PrivateRoute><ProductPage /></PrivateRoute>}/>
+              </Routes>
             </Layout>
-        {/* </ProductsState> */}
-        </ProductsProvider>
-      </UserProvider>
-      </CartProvider>
-    </Router>
+          </ProductsProvider>
+        </UserProvider>
+      </Router>
     </>
     )}
 export default App;

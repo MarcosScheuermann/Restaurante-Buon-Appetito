@@ -3,7 +3,6 @@ import {useEffect, useState} from "react";
 import ProductCard from "../components/ProductCard/ProductCard"; 
 import {Row, Col } from 'react-bootstrap';
 import { Container } from "react-bootstrap";
-import { URL_PRODUCTS } from "../constants";
 
 
 const Products = () => {
@@ -11,7 +10,7 @@ const Products = () => {
     useEffect(()=>{
         const getProducts = async()=>{
           try{
-            const response = await axios.get('http://localhost:4000/products');
+            const response = await axios.get('http://localhost:3500');
             const {data} = response;
              setProducts(data);
           }catch (error){
