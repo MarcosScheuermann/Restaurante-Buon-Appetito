@@ -1,16 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProductPage from "./pages/ProductPage";
 import CartPage from "./pages/CartPage";
 import LandingPage from "./pages/LandingPage";
-import UserProvider from "./context/UserContext";
-import React from 'react';
-import AboutUs from "./components/AboutUs/AboutUs";
-import PrivateRoute from "./routes/PrivateRoute";
-import ProductDetail from "./routes/PrivateRoute"
 import Layout from "./components/Layout/Layout";
-import Admin from "./pages/Admin";
+import UserProvider from "./context/UserContext";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Admin from "./pages/Admin";
+import React from 'react'; //Fer//
+import AboutUs from "./components/AboutUs/AboutUs";  
+import PrivateRoute from "./routes/PrivateRoute";
 import ProductsProvider from "./context/ProductsContext";
-import ProductCard from "./components/ProductCard/ProductCard";
+import ProductDetail from "./pages/ProductDetail";
+import Products from "./pages/Products";
 
 function App() {
   return (
@@ -22,9 +24,10 @@ function App() {
               <Routes>
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/login" element={<Login /> }/>
+                <Route path="/register" element={<Register />} />
                 <Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
+                <Route path="/products" element={<PrivateRoute><Products /></PrivateRoute>} />
                 <Route path="/carrito" element={<CartPage />} />
-                <Route path="/products" element={<ProductCard />} />
                 <Route path="/aboutUs" element={<AboutUs />} />
                 <Route path="/product/:id" element={<ProductDetail />}/>
               </Routes>
@@ -33,5 +36,7 @@ function App() {
         </UserProvider>
       </Router>
     </>
-    )}
+  );
+}
+
 export default App;
