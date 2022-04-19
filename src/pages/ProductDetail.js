@@ -1,6 +1,8 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import axiosClient from "../config/axiosClient";
+import { Col, Container, Row } from "react-bootstrap";
+import ProductCard from "../components/ProductCard/ProductCard";
 
 
 const ProductDetail = () => {
@@ -19,14 +21,23 @@ useEffect(()=>{
     getProduct()
 },[]);
 
-console.log(product);
-
     return (
       <>
-        <h3>DETALLE DE PRODUCTO</h3>
-        <p>{product.name}</p>
-        <p>{product.description}</p>
-        <p>NADA</p>
+        <h2>DETALLE DE PRODUCTO</h2>
+        
+        <Container className="mt-1 cardContainer">
+          <Row xs={1} md={3} className="g-2">
+            <Col>
+              <ProductCard
+                className="m-3"
+                id={product.id}
+                title={product.name}
+                description={product.description}
+                price={product.price}
+              />
+            </Col>
+          </Row>
+        </Container>
       </>
     );
 }
