@@ -34,9 +34,10 @@ const useForm = (initialValues, submit, validation) => {
   }
 
   return {
-    values,
     handleKeyUp,
     handleSubmit,
+    values,
+    setValues,
     errors
   }
 }

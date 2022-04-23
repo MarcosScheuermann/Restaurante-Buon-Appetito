@@ -18,7 +18,7 @@ const ProductCard = ({id,title,description,price}) => {
         <Card.Text>{description}</Card.Text>
         <Card.Text>{price}</Card.Text>
         <Button variant="btn btn-outline-secondary">
-          <Link to={"/product/" + id}>Ver producto</Link>
+          <Link to={"/product/" + id}>Comprar</Link>
         </Button>
       </Card.Body>
     </Card>
